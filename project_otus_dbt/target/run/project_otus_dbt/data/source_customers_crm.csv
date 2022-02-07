@@ -1,7 +1,5 @@
 
-    
-    create table "postgres"."public"."source_customers_crm" (id integer,country text,age integer)
-  ;
+    truncate table "postgres"."public"."source_customers_crm";
     -- dbt seed --
     
             insert into "postgres"."public"."source_customers_crm" (id, country, age) values

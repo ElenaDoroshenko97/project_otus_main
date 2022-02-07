@@ -8,4 +8,4 @@ sources:
       - name: source_customers
       - name: source_orders
       - name: source_wheat_usa
-      - name: stg_wheat_msk
+      - name: source_wheat_msk

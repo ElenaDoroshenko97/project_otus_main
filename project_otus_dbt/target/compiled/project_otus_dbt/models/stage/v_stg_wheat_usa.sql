@@ -16,13 +16,13 @@ WITH source_data AS (
 
     SELECT
 
-    Дата,
-    Цена,
-    Откр,
-    Макс,
-    Мин,
-    Объём,
-    Изм
+    tradedate,
+    value,
+    open,
+    high,
+    low,
+    volume,
+    changeperc
 
     FROM "postgres"."public"."source_wheat_usa"
 ),
@@ -31,14 +31,14 @@ derived_columns AS (
 
     SELECT
 
-    Дата,
-    Цена,
-    Откр,
-    Макс,
-    Мин,
-    Объём,
-    Изм,
-    Дата::TEXT AS DATE_KEY,
+    tradedate,
+    value,
+    open,
+    high,
+    low,
+    volume,
+    changeperc,
+    TRADEDATE::TEXT AS DATE_KEY,
     'CSV_WHEAT_USA'::TEXT AS RECORD_SOURCE
 
     FROM source_data
@@ -48,24 +48,24 @@ hashed_columns AS (
 
     SELECT
 
-    Дата,
-    Цена,
-    Откр,
-    Макс,
-    Мин,
-    Объём,
-    Изм,
+    tradedate,
+    value,
+    open,
+    high,
+    low,
+    volume,
+    changeperc,
     DATE_KEY,
     RECORD_SOURCE,
 
-    CAST((MD5(NULLIF(UPPER(TRIM(CAST(Дата AS VARCHAR))), ''))) AS TEXT) AS DATE_PK,
+    CAST((MD5(NULLIF(UPPER(TRIM(CAST(TRADEDATE AS VARCHAR))), ''))) AS TEXT) AS DATE_PK,
     CAST(MD5(CONCAT_WS('||',
-        COALESCE(NULLIF(UPPER(TRIM(CAST(Изм AS VARCHAR))), ''), '^^'),
-        COALESCE(NULLIF(UPPER(TRIM(CAST(Макс AS VARCHAR))), ''), '^^'),
-        COALESCE(NULLIF(UPPER(TRIM(CAST(Мин AS VARCHAR))), ''), '^^'),
-        COALESCE(NULLIF(UPPER(TRIM(CAST(Объём AS VARCHAR))), ''), '^^'),
-        COALESCE(NULLIF(UPPER(TRIM(CAST(Откр AS VARCHAR))), ''), '^^'),
-        COALESCE(NULLIF(UPPER(TRIM(CAST(Цена AS VARCHAR))), ''), '^^')
+        COALESCE(NULLIF(UPPER(TRIM(CAST(CHANGEPERC AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(HIGH AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(LOW AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(OPEN AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(VALUE AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(VOLUME AS VARCHAR))), ''), '^^')
     )) AS TEXT) AS DATE_HASHDIFF
 
     FROM derived_columns
@@ -75,13 +75,13 @@ columns_to_select AS (
 
     SELECT
 
-    Дата,
-    Цена,
-    Откр,
-    Макс,
-    Мин,
-    Объём,
-    Изм,
+    tradedate,
+    value,
+    open,
+    high,
+    low,
+    volume,
+    changeperc,
     DATE_KEY,
     RECORD_SOURCE,
     DATE_PK,

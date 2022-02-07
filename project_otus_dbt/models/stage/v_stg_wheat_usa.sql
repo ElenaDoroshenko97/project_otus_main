@@ -6,20 +6,21 @@
 
 {%- set yaml_metadata -%}
 source_model: 'source_wheat_usa'
+
 derived_columns:
-  DATE_KEY: 'Дата'
+  DATE_KEY: 'TRADEDATE'
   RECORD_SOURCE: '!CSV_WHEAT_USA'
 hashed_columns:
-  DATE_PK: 'Дата'
+  DATE_PK: 'TRADEDATE'
   DATE_HASHDIFF:
     is_hashdiff: true
     columns:
-      - 'Цена'
-      - 'Откр'
-      - 'Макс'
-      - 'Мин'
-      - 'Объём'
-      - 'Изм'
+      - 'VALUE'
+      - 'OPEN'
+      - 'HIGH'
+      - 'LOW'
+      - 'VOLUME'
+      - 'CHANGEPERC'
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}

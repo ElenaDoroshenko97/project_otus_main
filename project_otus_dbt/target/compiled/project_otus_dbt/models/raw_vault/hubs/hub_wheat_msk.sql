@@ -3,9 +3,9 @@
 WITH row_rank_1 AS (
 
 SELECT * FROM (
-    SELECT TRADEDATE, TRADEDATE, LOAD_DATE, RECORD_SOURCE,
+    SELECT DATE_PK, DATE_KEY, LOAD_DATE, RECORD_SOURCE,
            ROW_NUMBER() OVER(
-               PARTITION BY TRADEDATE
+               PARTITION BY DATE_PK
                ORDER BY LOAD_DATE ASC
            ) AS row_number
     FROM "postgres"."public"."v_stg_wheat_msk"
@@ -15,8 +15,11 @@ WHERE row_number = 1
 ),
 
 records_to_insert AS (
-    SELECT a.TRADEDATE, a.TRADEDATE, a.LOAD_DATE, a.RECORD_SOURCE
+    SELECT a.DATE_PK, a.DATE_KEY, a.LOAD_DATE, a.RECORD_SOURCE
     FROM row_rank_1 AS a
+    LEFT JOIN "postgres"."public"."hub_wheat_msk" AS d
+    ON a.DATE_PK = d.DATE_PK
+    WHERE d.DATE_PK IS NULL
 )
 
 SELECT * FROM records_to_insert
