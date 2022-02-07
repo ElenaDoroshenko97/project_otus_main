@@ -1,5 +1,5 @@
 
-  create view "postgres"."public"."v_stg_wheat_usa__dbt_tmp" as (
+  create view "postgres"."public"."v_stg_rate_gbp_usd__dbt_tmp" as (
     
 
 
@@ -23,10 +23,9 @@ WITH source_data AS (
     open,
     high,
     low,
-    volume,
     changeperc
 
-    FROM "postgres"."public"."source_wheat_usa"
+    FROM "postgres"."public"."source_rate_gbp_usd"
 ),
 
 derived_columns AS (
@@ -38,10 +37,9 @@ derived_columns AS (
     open,
     high,
     low,
-    volume,
     changeperc,
     TRADEDATE::TEXT AS DATE_KEY,
-    'CSV_WHEAT_USA'::TEXT AS RECORD_SOURCE
+    'CSV_WHEAT_RATE_GBP_USD'::TEXT AS RECORD_SOURCE
 
     FROM source_data
 ),
@@ -55,7 +53,6 @@ hashed_columns AS (
     open,
     high,
     low,
-    volume,
     changeperc,
     DATE_KEY,
     RECORD_SOURCE,
@@ -66,8 +63,7 @@ hashed_columns AS (
         COALESCE(NULLIF(UPPER(TRIM(CAST(HIGH AS VARCHAR))), ''), '^^'),
         COALESCE(NULLIF(UPPER(TRIM(CAST(LOW AS VARCHAR))), ''), '^^'),
         COALESCE(NULLIF(UPPER(TRIM(CAST(OPEN AS VARCHAR))), ''), '^^'),
-        COALESCE(NULLIF(UPPER(TRIM(CAST(PRICE AS VARCHAR))), ''), '^^'),
-        COALESCE(NULLIF(UPPER(TRIM(CAST(VOLUME AS VARCHAR))), ''), '^^')
+        COALESCE(NULLIF(UPPER(TRIM(CAST(PRICE AS VARCHAR))), ''), '^^')
     )) AS TEXT) AS DATE_HASHDIFF
 
     FROM derived_columns
@@ -82,7 +78,6 @@ columns_to_select AS (
     open,
     high,
     low,
-    volume,
     changeperc,
     DATE_KEY,
     RECORD_SOURCE,

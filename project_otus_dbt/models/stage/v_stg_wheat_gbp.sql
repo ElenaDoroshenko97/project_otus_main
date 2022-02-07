@@ -5,17 +5,22 @@
 }}
 
 {%- set yaml_metadata -%}
-source_model: 'source_customers_crm'
+source_model: 'source_wheat_gbp'
+
 derived_columns:
-  CUSTOMER_KEY: 'id'
-  RECORD_SOURCE: '!CSV_CUSTOMERS_CRM'
+  DATE_KEY: 'TRADEDATE'
+  RECORD_SOURCE: '!CSV_WHEAT_GBP'
 hashed_columns:
-  CUSTOMER_PK: 'id'
-  CUSTOMER_HASHDIFF:
+  DATE_PK: 'TRADEDATE'
+  DATE_HASHDIFF:
     is_hashdiff: true
     columns:
-      - 'country'
-      - 'age'
+      - 'PRICE'
+      - 'OPEN'
+      - 'HIGH'
+      - 'LOW'
+      - 'VOLUME'
+      - 'CHANGEPERC'
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}

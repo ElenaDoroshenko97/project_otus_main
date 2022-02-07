@@ -27,9 +27,9 @@ vars:
 
 models:
   project_otus_dbt:
-    prestage:
+    dds:
       tags:
-        - 'prestage'
+        - 'dds'
       materialized: table
     stage:
       tags:
@@ -47,7 +47,7 @@ models:
           - 'link'
       sats:
         tags:
-          - 'satellite'
+          - 'sat'
     dim:
       tags:
         - 'dim'

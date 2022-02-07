@@ -7,7 +7,7 @@
 {%- set source_model = "v_stg_wheat_msk" -%}
 {%- set src_pk = "DATE_PK" -%}
 {%- set src_hashdiff = "DATE_HASHDIFF" -%}
-{%- set src_payload = ["TRADEDATE", "VALUE", "OPEN", "HIGH", "LOW", "VOLUME"] -%}
+{%- set src_payload = ["TRADEDATE", "VALUE", "OPEN", "CLOSE", "HIGH", "LOW", "VOLUME"] -%}
 {%- set src_eff = "EFFECTIVE_FROM" -%}
 {%- set src_ldts = "LOAD_DATE" -%}
 {%- set src_source = "RECORD_SOURCE" -%}

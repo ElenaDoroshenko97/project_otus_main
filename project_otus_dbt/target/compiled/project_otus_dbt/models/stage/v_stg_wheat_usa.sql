@@ -17,7 +17,7 @@ WITH source_data AS (
     SELECT
 
     tradedate,
-    value,
+    price,
     open,
     high,
     low,
@@ -32,7 +32,7 @@ derived_columns AS (
     SELECT
 
     tradedate,
-    value,
+    price,
     open,
     high,
     low,
@@ -49,7 +49,7 @@ hashed_columns AS (
     SELECT
 
     tradedate,
-    value,
+    price,
     open,
     high,
     low,
@@ -64,7 +64,7 @@ hashed_columns AS (
         COALESCE(NULLIF(UPPER(TRIM(CAST(HIGH AS VARCHAR))), ''), '^^'),
         COALESCE(NULLIF(UPPER(TRIM(CAST(LOW AS VARCHAR))), ''), '^^'),
         COALESCE(NULLIF(UPPER(TRIM(CAST(OPEN AS VARCHAR))), ''), '^^'),
-        COALESCE(NULLIF(UPPER(TRIM(CAST(VALUE AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(PRICE AS VARCHAR))), ''), '^^'),
         COALESCE(NULLIF(UPPER(TRIM(CAST(VOLUME AS VARCHAR))), ''), '^^')
     )) AS TEXT) AS DATE_HASHDIFF
 
@@ -76,7 +76,7 @@ columns_to_select AS (
     SELECT
 
     tradedate,
-    value,
+    price,
     open,
     high,
     low,

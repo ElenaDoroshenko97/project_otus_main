@@ -4,7 +4,7 @@
     )
 }}
 
-{%- set source_model = "v_stg_wheat_usa" -%}
+{%- set source_model = "v_stg_wheat_gbp" -%}
 {%- set src_pk = "DATE_PK" -%}
 {%- set src_hashdiff = "DATE_HASHDIFF" -%}
 {%- set src_payload = ["TRADEDATE", "PRICE", "OPEN", "HIGH", "LOW", "VOLUME"] -%}

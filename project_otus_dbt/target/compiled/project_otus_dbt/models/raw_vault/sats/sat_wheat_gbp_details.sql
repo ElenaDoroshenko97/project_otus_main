@@ -2,12 +2,12 @@
 
 WITH source_data AS (
     SELECT a.DATE_PK, a.DATE_HASHDIFF, a.TRADEDATE, a.PRICE, a.OPEN, a.HIGH, a.LOW, a.VOLUME, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
-    FROM "postgres"."public"."v_stg_wheat_usa" AS a
+    FROM "postgres"."public"."v_stg_wheat_gbp" AS a
 ),
 
 update_records AS (
     SELECT a.DATE_PK, a.DATE_HASHDIFF, a.TRADEDATE, a.PRICE, a.OPEN, a.HIGH, a.LOW, a.VOLUME, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
-    FROM "postgres"."public"."sat_wheat_usa_details" as a
+    FROM "postgres"."public"."sat_wheat_gbp_details" as a
     JOIN source_data as b
     ON a.DATE_PK = b.DATE_PK
 ),

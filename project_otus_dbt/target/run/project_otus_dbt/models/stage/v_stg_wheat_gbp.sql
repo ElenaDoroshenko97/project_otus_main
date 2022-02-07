@@ -1,5 +1,5 @@
 
-  create view "postgres"."public"."v_stg_wheat_usa__dbt_tmp" as (
+  create view "postgres"."public"."v_stg_wheat_gbp__dbt_tmp" as (
     
 
 
@@ -26,7 +26,7 @@ WITH source_data AS (
     volume,
     changeperc
 
-    FROM "postgres"."public"."source_wheat_usa"
+    FROM "postgres"."public"."source_wheat_gbp"
 ),
 
 derived_columns AS (
@@ -41,7 +41,7 @@ derived_columns AS (
     volume,
     changeperc,
     TRADEDATE::TEXT AS DATE_KEY,
-    'CSV_WHEAT_USA'::TEXT AS RECORD_SOURCE
+    'CSV_WHEAT_GBP'::TEXT AS RECORD_SOURCE
 
     FROM source_data
 ),

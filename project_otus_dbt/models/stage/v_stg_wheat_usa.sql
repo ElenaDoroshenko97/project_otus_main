@@ -15,7 +15,7 @@ hashed_columns:
   DATE_HASHDIFF:
     is_hashdiff: true
     columns:
-      - 'VALUE'
+      - 'PRICE'
       - 'OPEN'
       - 'HIGH'
       - 'LOW'

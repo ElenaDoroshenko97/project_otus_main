@@ -1,0 +1,47 @@
+
+--msk
+select sm.tradedate  as tradedate
+    ,cast(sm.close as decimal(18,2)) as price
+    ,cast(sm.value as decimal(18,2)) as value_all
+    ,cast(sm.open as decimal(18,2)) as open
+    ,cast(sm.close as decimal(18,2)) as close
+    ,cast(sm.high as decimal(18,2)) as high
+    ,cast(sm.low as decimal(18,2)) as low
+    ,cast(sm.volume as decimal(18,2)) as volume
+from public.hub_wheat_msk as hm
+left join public.sat_wheat_msk_details as sm
+on hm.date_pk=sm.date_pk;
+
+--usa
+select to_date(su.tradedate, 'DD.MM.YYYY') as tradedate
+     ,cast(su.price as decimal(18,2))/100.0/2.7 as price
+     ,cast(su.open as decimal(18,2))/100.0 as open
+     ,cast(su.high as decimal(18,2))/100.0 as high
+     ,cast(su.low as decimal(18,2))/100.0 as low
+     ,cast(su.volume as varchar(50)) as volume
+from public.hub_wheat_usa as hu
+left join public.sat_wheat_usa_details as su
+on hu.date_pk=su.date_pk;
+
+--rate
+select to_date(su.tradedate, 'DD.MM.YYYY') as tradedate
+     ,cast(su.price as decimal(18,2))/10000.0 as rate
+     ,cast(su.open as decimal(18,2))/10000.0 as open
+     ,cast(su.high as decimal(18,2))/10000.0 as high
+     ,cast(su.low as decimal(18,2))/10000.0 as low
+from public.hub_rate_gbp_usd as hu
+left join public.sat_rate_gbp_usd_details as su
+on hu.date_pk=su.date_pk;
+
+--gbp
+select to_date(su.tradedate, 'DD.MM.YYYY') as tradedate
+     ,cast(su.price as decimal(18,2))/100.0*rt.rate as price
+     ,cast(su.open as decimal(18,2))/100.0 as open
+     ,cast(su.high as decimal(18,2))/100.0 as high
+     ,cast(su.low as decimal(18,2))/100.0 as low
+     ,cast(su.volume as varchar(50)) as volume
+from public.hub_wheat_gbp as hu
+left join public.sat_wheat_gbp_details as su
+on hu.date_pk=su.date_pk
+left join public.dds_rate_gbp_usd as rt
+on hu.date_pk=rt.date_pk;

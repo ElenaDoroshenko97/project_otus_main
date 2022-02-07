@@ -5,22 +5,21 @@
 }}
 
 {%- set yaml_metadata -%}
-source_model: 'source_orders'
+source_model: 'source_rate_gbp_usd'
+
 derived_columns:
-  CUSTOMER_KEY: 'user_id'
-  ORDER_KEY: 'id'
-  RECORD_SOURCE: '!CSV_ORDERS'
+  DATE_KEY: 'TRADEDATE'
+  RECORD_SOURCE: '!CSV_WHEAT_RATE_GBP_USD'
 hashed_columns:
-  CUSTOMER_PK: 'user_id'
-  ORDER_PK: 'id'
-  LINK_CUSTOMER_ORDER_PK:
-    - 'user_id'
-    - 'id'
-  ORDER_HASHDIFF:
+  DATE_PK: 'TRADEDATE'
+  DATE_HASHDIFF:
     is_hashdiff: true
     columns:
-      - 'order_date'
-      - 'status'
+      - 'PRICE'
+      - 'OPEN'
+      - 'HIGH'
+      - 'LOW'
+      - 'CHANGEPERC'
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}
