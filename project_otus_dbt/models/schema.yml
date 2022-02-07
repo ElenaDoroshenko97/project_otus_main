@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: src
+    database: postgres
+    schema: public
+    tables:
+      - name: source_customers
+      - name: source_orders
+      - name: source_wheat_usa
+      - name: stg_wheat_msk

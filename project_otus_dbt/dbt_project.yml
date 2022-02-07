@@ -1,0 +1,60 @@
+name: project_otus_dbt
+profile: jaffle_shop
+version: '0.1.0'
+require-dbt-version: '>=0.0.1'
+config-version: 2
+
+analysis-paths:
+  - analysis
+clean-targets:
+  - target
+data-paths:
+  - data
+macro-paths:
+  - macros
+source-paths:
+  - models
+test-paths:
+  - tests
+target-path: target
+clean-targets:
+    - "target"
+    - "dbt_modules"
+
+vars:
+  load_date: 'current_timestamp'
+  given_dttm: '2022-02-03 14:30:00'
+
+models:
+  project_otus_dbt:
+    prestage:
+      tags:
+        - 'prestage'
+      materialized: table
+    stage:
+      tags:
+        - 'stage'
+      materialized: view
+    raw_vault:
+      tags:
+        - 'raw_vault'
+      materialized: incremental
+      hubs:
+        tags:
+          - 'hub'
+      links:
+        tags:
+          - 'link'
+      sats:
+        tags:
+          - 'satellite'
+    dim:
+      tags:
+        - 'dim'
+      materialized: table
+    report:
+      tags:
+        - 'report'
+      materialized: table
+        
+          
