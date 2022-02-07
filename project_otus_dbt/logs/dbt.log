@@ -38016,3 +38016,2434 @@ drop table if exists "postgres"."public"."dds_wheat_gbp__dbt_backup" cascade
 2022-02-07 22:03:47.282197 (MainThread): 
 Done. PASS=18 WARN=0 ERROR=0 SKIP=0 TOTAL=18
 2022-02-07 22:03:47.282545 (MainThread): Flushing usage events
+2022-02-07 22:20:36.825006 (MainThread): Running with dbt=0.19.0
+2022-02-07 22:20:37.041310 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/home/rusedr/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2022-02-07 22:20:37.043415 (MainThread): Tracking: do not track
+2022-02-07 22:20:37.176916 (MainThread): Partial parsing not enabled
+2022-02-07 22:20:37.180147 (MainThread): Parsing macros/adapters.sql
+2022-02-07 22:20:37.210351 (MainThread): Parsing macros/catalog.sql
+2022-02-07 22:20:37.214995 (MainThread): Parsing macros/relations.sql
+2022-02-07 22:20:37.218393 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2022-02-07 22:20:37.224503 (MainThread): Parsing macros/core.sql
+2022-02-07 22:20:37.233189 (MainThread): Parsing macros/adapters/common.sql
+2022-02-07 22:20:37.297183 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2022-02-07 22:20:37.300144 (MainThread): Parsing macros/etc/get_custom_database.sql
+2022-02-07 22:20:37.302565 (MainThread): Parsing macros/etc/datetime.sql
+2022-02-07 22:20:37.316292 (MainThread): Parsing macros/etc/is_incremental.sql
+2022-02-07 22:20:37.319698 (MainThread): Parsing macros/etc/query.sql
+2022-02-07 22:20:37.322135 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2022-02-07 22:20:37.324514 (MainThread): Parsing macros/materializations/helpers.sql
+2022-02-07 22:20:37.342613 (MainThread): Parsing macros/materializations/seed/seed.sql
+2022-02-07 22:20:37.368826 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2022-02-07 22:20:37.371846 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2022-02-07 22:20:37.417687 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2022-02-07 22:20:37.447391 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2022-02-07 22:20:37.455734 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2022-02-07 22:20:37.458910 (MainThread): Parsing macros/materializations/common/merge.sql
+2022-02-07 22:20:37.476731 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2022-02-07 22:20:37.484037 (MainThread): Parsing macros/materializations/view/view.sql
+2022-02-07 22:20:37.491965 (MainThread): Parsing macros/materializations/table/table.sql
+2022-02-07 22:20:37.499810 (MainThread): Parsing macros/schema_tests/unique.sql
+2022-02-07 22:20:37.503351 (MainThread): Parsing macros/schema_tests/not_null.sql
+2022-02-07 22:20:37.506020 (MainThread): Parsing macros/schema_tests/relationships.sql
+2022-02-07 22:20:37.509532 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2022-02-07 22:20:37.515969 (MainThread): Parsing macros/geo/haversine_distance.sql
+2022-02-07 22:20:37.518880 (MainThread): Parsing macros/cross_db_utils/split_part.sql
+2022-02-07 22:20:37.522368 (MainThread): Parsing macros/cross_db_utils/literal.sql
+2022-02-07 22:20:37.524674 (MainThread): Parsing macros/cross_db_utils/datediff.sql
+2022-02-07 22:20:37.538480 (MainThread): Parsing macros/cross_db_utils/_is_ephemeral.sql
+2022-02-07 22:20:37.541910 (MainThread): Parsing macros/cross_db_utils/date_trunc.sql
+2022-02-07 22:20:37.546244 (MainThread): Parsing macros/cross_db_utils/dateadd.sql
+2022-02-07 22:20:37.551236 (MainThread): Parsing macros/cross_db_utils/_get_utils_namespaces.sql
+2022-02-07 22:20:37.552924 (MainThread): Parsing macros/cross_db_utils/safe_cast.sql
+2022-02-07 22:20:37.556801 (MainThread): Parsing macros/cross_db_utils/last_day.sql
+2022-02-07 22:20:37.563080 (MainThread): Parsing macros/cross_db_utils/length.sql
+2022-02-07 22:20:37.566942 (MainThread): Parsing macros/cross_db_utils/identifier.sql
+2022-02-07 22:20:37.572857 (MainThread): Parsing macros/cross_db_utils/concat.sql
+2022-02-07 22:20:37.579036 (MainThread): Parsing macros/cross_db_utils/datatypes.sql
+2022-02-07 22:20:37.600652 (MainThread): Parsing macros/cross_db_utils/current_timestamp.sql
+2022-02-07 22:20:37.606532 (MainThread): Parsing macros/cross_db_utils/right.sql
+2022-02-07 22:20:37.612824 (MainThread): Parsing macros/cross_db_utils/_is_relation.sql
+2022-02-07 22:20:37.615867 (MainThread): Parsing macros/cross_db_utils/position.sql
+2022-02-07 22:20:37.621298 (MainThread): Parsing macros/cross_db_utils/replace.sql
+2022-02-07 22:20:37.627340 (MainThread): Parsing macros/cross_db_utils/intersect.sql
+2022-02-07 22:20:37.633221 (MainThread): Parsing macros/cross_db_utils/width_bucket.sql
+2022-02-07 22:20:37.641074 (MainThread): Parsing macros/cross_db_utils/except.sql
+2022-02-07 22:20:37.644175 (MainThread): Parsing macros/cross_db_utils/hash.sql
+2022-02-07 22:20:37.648022 (MainThread): Parsing macros/web/get_url_host.sql
+2022-02-07 22:20:37.651854 (MainThread): Parsing macros/web/get_url_path.sql
+2022-02-07 22:20:37.656140 (MainThread): Parsing macros/web/get_url_parameter.sql
+2022-02-07 22:20:37.658756 (MainThread): Parsing macros/sql/star.sql
+2022-02-07 22:20:37.664949 (MainThread): Parsing macros/sql/safe_add.sql
+2022-02-07 22:20:37.667339 (MainThread): Parsing macros/sql/pivot.sql
+2022-02-07 22:20:37.672743 (MainThread): Parsing macros/sql/nullcheck_table.sql
+2022-02-07 22:20:37.675386 (MainThread): Parsing macros/sql/unpivot.sql
+2022-02-07 22:20:37.686045 (MainThread): Parsing macros/sql/union.sql
+2022-02-07 22:20:37.699806 (MainThread): Parsing macros/sql/nullcheck.sql
+2022-02-07 22:20:37.702803 (MainThread): Parsing macros/sql/generate_series.sql
+2022-02-07 22:20:37.709090 (MainThread): Parsing macros/sql/get_relations_by_pattern.sql
+2022-02-07 22:20:37.713913 (MainThread): Parsing macros/sql/surrogate_key.sql
+2022-02-07 22:20:37.719332 (MainThread): Parsing macros/sql/get_tables_by_pattern_sql.sql
+2022-02-07 22:20:37.727211 (MainThread): Parsing macros/sql/get_column_values.sql
+2022-02-07 22:20:37.732474 (MainThread): Parsing macros/sql/groupby.sql
+2022-02-07 22:20:37.734501 (MainThread): Parsing macros/sql/get_tables_by_prefix_sql.sql
+2022-02-07 22:20:37.736733 (MainThread): Parsing macros/sql/get_query_results_as_dict.sql
+2022-02-07 22:20:37.739613 (MainThread): Parsing macros/sql/get_relations_by_prefix.sql
+2022-02-07 22:20:37.743575 (MainThread): Parsing macros/logger/pretty_log_format.sql
+2022-02-07 22:20:37.745095 (MainThread): Parsing macros/logger/pretty_time.sql
+2022-02-07 22:20:37.746944 (MainThread): Parsing macros/logger/log_info.sql
+2022-02-07 22:20:37.750145 (MainThread): Parsing macros/materializations/insert_by_period_materialization.sql
+2022-02-07 22:20:37.787243 (MainThread): Parsing macros/schema_tests/expression_is_true.sql
+2022-02-07 22:20:37.789700 (MainThread): Parsing macros/schema_tests/cardinality_equality.sql
+2022-02-07 22:20:37.793977 (MainThread): Parsing macros/schema_tests/test_not_null_where.sql
+2022-02-07 22:20:37.797506 (MainThread): Parsing macros/schema_tests/recency.sql
+2022-02-07 22:20:37.800815 (MainThread): Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+2022-02-07 22:20:37.811946 (MainThread): Parsing macros/schema_tests/equality.sql
+2022-02-07 22:20:37.818281 (MainThread): Parsing macros/schema_tests/relationships_where.sql
+2022-02-07 22:20:37.822923 (MainThread): Parsing macros/schema_tests/not_constant.sql
+2022-02-07 22:20:37.825290 (MainThread): Parsing macros/schema_tests/at_least_one.sql
+2022-02-07 22:20:37.827548 (MainThread): Parsing macros/schema_tests/test_unique_where.sql
+2022-02-07 22:20:37.830282 (MainThread): Parsing macros/schema_tests/unique_combination_of_columns.sql
+2022-02-07 22:20:37.833548 (MainThread): Parsing macros/schema_tests/equal_rowcount.sql
+2022-02-07 22:20:37.835808 (MainThread): Parsing macros/datetime/date_spine.sql
+2022-02-07 22:20:37.845696 (MainThread): Parsing macros/internal/alias_all.sql
+2022-02-07 22:20:37.848973 (MainThread): Parsing macros/internal/alias.sql
+2022-02-07 22:20:37.854847 (MainThread): Parsing macros/internal/get_package_namespaces.sql
+2022-02-07 22:20:37.856327 (MainThread): Parsing macros/internal/as_constant.sql
+2022-02-07 22:20:37.859628 (MainThread): Parsing macros/internal/expand_column_list.sql
+2022-02-07 22:20:37.863557 (MainThread): Parsing macros/internal/multikey.sql
+2022-02-07 22:20:37.869981 (MainThread): Parsing macros/internal/stage_processing_macros.sql
+2022-02-07 22:20:37.880856 (MainThread): Parsing macros/internal/is_checks.sql
+2022-02-07 22:20:37.884456 (MainThread): Parsing macros/internal/prepend_generated_by.sql
+2022-02-07 22:20:37.885675 (MainThread): Parsing macros/tables/hub.sql
+2022-02-07 22:20:37.911154 (MainThread): Parsing macros/tables/link.sql
+2022-02-07 22:20:37.932397 (MainThread): Parsing macros/tables/eff_sat.sql
+2022-02-07 22:20:37.950715 (MainThread): Parsing macros/tables/sat.sql
+2022-02-07 22:20:37.959732 (MainThread): Parsing macros/tables/t_link.sql
+2022-02-07 22:20:37.964143 (MainThread): Parsing macros/materialisations/vault_insert_by_rank_materialization.sql
+2022-02-07 22:20:37.991601 (MainThread): Parsing macros/materialisations/rank_mat_helpers.sql
+2022-02-07 22:20:37.998851 (MainThread): Parsing macros/materialisations/vault_insert_by_period_materialization.sql
+2022-02-07 22:20:38.018345 (MainThread): Parsing macros/materialisations/shared_helpers.sql
+2022-02-07 22:20:38.020161 (MainThread): Parsing macros/materialisations/period_mat_helpers.sql
+2022-02-07 22:20:38.042775 (MainThread): Parsing macros/supporting/prefix.sql
+2022-02-07 22:20:38.049362 (MainThread): Parsing macros/supporting/hash.sql
+2022-02-07 22:20:38.057589 (MainThread): Parsing macros/staging/source_columns.sql
+2022-02-07 22:20:38.061442 (MainThread): Parsing macros/staging/derive_columns.sql
+2022-02-07 22:20:38.074914 (MainThread): Parsing macros/staging/rank_columns.sql
+2022-02-07 22:20:38.081782 (MainThread): Parsing macros/staging/stage.sql
+2022-02-07 22:20:38.100050 (MainThread): Parsing macros/staging/hash_columns.sql
+2022-02-07 22:20:38.113198 (MainThread): Partial parsing not enabled
+2022-02-07 22:20:38.280226 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.sat_wheat_usa_details".
+2022-02-07 22:20:38.437405 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.sat_wheat_msk_details".
+2022-02-07 22:20:38.471193 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.sat_rate_gbp_usd_details".
+2022-02-07 22:20:38.500571 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.sat_wheat_gbp_details".
+2022-02-07 22:20:38.528261 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.hub_wheat_msk".
+2022-02-07 22:20:38.584046 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.hub_wheat_gbp".
+2022-02-07 22:20:38.613276 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.hub_rate_gbp_usd".
+2022-02-07 22:20:38.637317 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.hub_wheat_usa".
+2022-02-07 22:20:38.659048 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:38.971132 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:39.031704 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:39.092901 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:39.125683 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.dim_day".
+2022-02-07 22:20:39.146049 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.dim_week".
+2022-02-07 22:20:39.161972 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.dds_wheat_usa".
+2022-02-07 22:20:39.181742 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.dds_wheat_gbp".
+2022-02-07 22:20:39.200260 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.dds_wheat_msk".
+2022-02-07 22:20:39.216836 (MainThread): Acquiring new postgres connection "model.project_otus_dbt.dds_rate_gbp_usd".
+2022-02-07 22:20:40.234161 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.project_otus_dbt.report
+- models.project_otus_dbt.raw_vault.links
+
+2022-02-07 22:20:40.422509 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2022-02-07 22:20:40.424060 (MainThread): Found 18 models, 0 tests, 0 snapshots, 0 analyses, 367 macros, 0 operations, 4 seed files, 4 sources, 0 exposures
+2022-02-07 22:20:40.427486 (MainThread): 
+2022-02-07 22:20:40.428541 (MainThread): Acquiring new postgres connection "master".
+2022-02-07 22:20:40.465282 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_postgres".
+2022-02-07 22:20:40.486281 (ThreadPoolExecutor-0_0): Using postgres connection "list_postgres".
+2022-02-07 22:20:40.486603 (ThreadPoolExecutor-0_0): On list_postgres: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+2022-02-07 22:20:40.486871 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2022-02-07 22:20:40.623190 (ThreadPoolExecutor-0_0): SQL status: SELECT 18 in 0.14 seconds
+2022-02-07 22:20:40.629274 (ThreadPoolExecutor-0_0): On list_postgres: Close
+2022-02-07 22:20:40.751454 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_postgres_public".
+2022-02-07 22:20:40.771776 (ThreadPoolExecutor-1_0): Using postgres connection "list_postgres_public".
+2022-02-07 22:20:40.772240 (ThreadPoolExecutor-1_0): On list_postgres_public: BEGIN
+2022-02-07 22:20:40.772651 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2022-02-07 22:20:41.109682 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.34 seconds
+2022-02-07 22:20:41.110248 (ThreadPoolExecutor-1_0): Using postgres connection "list_postgres_public".
+2022-02-07 22:20:41.110554 (ThreadPoolExecutor-1_0): On list_postgres_public: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2022-02-07 22:20:41.302608 (ThreadPoolExecutor-1_0): SQL status: SELECT 25 in 0.19 seconds
+2022-02-07 22:20:41.368335 (ThreadPoolExecutor-1_0): On list_postgres_public: ROLLBACK
+2022-02-07 22:20:41.370975 (ThreadPoolExecutor-1_0): On list_postgres_public: Close
+2022-02-07 22:20:41.489621 (MainThread): Using postgres connection "master".
+2022-02-07 22:20:41.489988 (MainThread): On master: BEGIN
+2022-02-07 22:20:41.490212 (MainThread): Opening a new connection, currently in state init
+2022-02-07 22:20:41.549284 (MainThread): SQL status: BEGIN in 0.06 seconds
+2022-02-07 22:20:41.549939 (MainThread): Using postgres connection "master".
+2022-02-07 22:20:41.550197 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2022-02-07 22:20:42.583781 (MainThread): SQL status: SELECT 10 in 1.03 seconds
+2022-02-07 22:20:42.614603 (MainThread): On master: ROLLBACK
+2022-02-07 22:20:42.616709 (MainThread): Using postgres connection "master".
+2022-02-07 22:20:42.617022 (MainThread): On master: BEGIN
+2022-02-07 22:20:42.619882 (MainThread): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:42.620351 (MainThread): On master: COMMIT
+2022-02-07 22:20:42.620649 (MainThread): Using postgres connection "master".
+2022-02-07 22:20:42.620793 (MainThread): On master: COMMIT
+2022-02-07 22:20:42.622859 (MainThread): SQL status: COMMIT in 0.00 seconds
+2022-02-07 22:20:42.623195 (MainThread): On master: Close
+2022-02-07 22:20:42.624161 (MainThread): 01:20:42 | Concurrency: 2 threads (target='dev')
+2022-02-07 22:20:42.624758 (MainThread): 01:20:42 | 
+2022-02-07 22:20:42.634322 (Thread-1): Began running node model.project_otus_dbt.v_stg_rate_gbp_usd
+2022-02-07 22:20:42.634889 (Thread-2): Began running node model.project_otus_dbt.v_stg_wheat_gbp
+2022-02-07 22:20:42.639377 (Thread-1): 01:20:42 | 1 of 18 START view model public.v_stg_rate_gbp_usd................... [RUN]
+2022-02-07 22:20:42.642679 (Thread-2): 01:20:42 | 2 of 18 START view model public.v_stg_wheat_gbp...................... [RUN]
+2022-02-07 22:20:42.643877 (Thread-1): Acquiring new postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:42.644985 (Thread-2): Acquiring new postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:42.645448 (Thread-1): Compiling model.project_otus_dbt.v_stg_rate_gbp_usd
+2022-02-07 22:20:42.645794 (Thread-2): Compiling model.project_otus_dbt.v_stg_wheat_gbp
+2022-02-07 22:20:42.742762 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:42.744248 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:42.744738 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: BEGIN
+2022-02-07 22:20:42.745296 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: BEGIN
+2022-02-07 22:20:42.745912 (Thread-1): Opening a new connection, currently in state closed
+2022-02-07 22:20:42.746547 (Thread-2): Opening a new connection, currently in state init
+2022-02-07 22:20:42.781557 (Thread-1): SQL status: BEGIN in 0.04 seconds
+2022-02-07 22:20:42.782129 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:42.782564 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_rate_gbp_usd"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'source_rate_gbp_usd'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:42.840454 (Thread-2): SQL status: BEGIN in 0.09 seconds
+2022-02-07 22:20:42.841127 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:42.841745 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_gbp"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'source_wheat_gbp'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:43.007826 (Thread-1): SQL status: SELECT 6 in 0.22 seconds
+2022-02-07 22:20:43.117926 (Thread-2): SQL status: SELECT 7 in 0.28 seconds
+2022-02-07 22:20:43.130783 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:43.136838 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_rate_gbp_usd"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'source_rate_gbp_usd'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:43.144726 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:43.145139 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_gbp"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'source_wheat_gbp'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:43.163280 (Thread-1): SQL status: SELECT 6 in 0.02 seconds
+2022-02-07 22:20:43.182044 (Thread-1): Writing injected SQL for node "model.project_otus_dbt.v_stg_rate_gbp_usd"
+2022-02-07 22:20:43.185545 (Thread-1): finished collecting timing info
+2022-02-07 22:20:43.194301 (Thread-2): SQL status: SELECT 7 in 0.05 seconds
+2022-02-07 22:20:43.241993 (Thread-2): Writing injected SQL for node "model.project_otus_dbt.v_stg_wheat_gbp"
+2022-02-07 22:20:43.276223 (Thread-2): finished collecting timing info
+2022-02-07 22:20:43.303346 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:43.311195 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_rate_gbp_usd"} */
+drop view if exists "postgres"."public"."v_stg_rate_gbp_usd__dbt_tmp" cascade
+2022-02-07 22:20:43.320920 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:43.321321 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_gbp"} */
+drop view if exists "postgres"."public"."v_stg_wheat_gbp__dbt_tmp" cascade
+2022-02-07 22:20:43.327016 (Thread-2): SQL status: DROP VIEW in 0.01 seconds
+2022-02-07 22:20:43.333985 (Thread-1): SQL status: DROP VIEW in 0.02 seconds
+2022-02-07 22:20:43.335478 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:43.342691 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:43.343311 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_gbp"} */
+drop view if exists "postgres"."public"."v_stg_wheat_gbp__dbt_backup" cascade
+2022-02-07 22:20:43.343726 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_rate_gbp_usd"} */
+drop view if exists "postgres"."public"."v_stg_rate_gbp_usd__dbt_backup" cascade
+2022-02-07 22:20:43.345992 (Thread-2): SQL status: DROP VIEW in 0.00 seconds
+2022-02-07 22:20:43.354078 (Thread-1): SQL status: DROP VIEW in 0.01 seconds
+2022-02-07 22:20:43.363660 (Thread-2): Writing runtime SQL for node "model.project_otus_dbt.v_stg_wheat_gbp"
+2022-02-07 22:20:43.368302 (Thread-1): Writing runtime SQL for node "model.project_otus_dbt.v_stg_rate_gbp_usd"
+2022-02-07 22:20:43.370100 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:43.372577 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_gbp"} */
+
+  create view "postgres"."public"."v_stg_wheat_gbp__dbt_tmp" as (
+    
+
+
+
+
+
+
+
+
+WITH staging AS (
+-- Generated by dbtvault.
+
+
+
+WITH source_data AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    volume,
+    changeperc
+
+    FROM "postgres"."public"."source_wheat_gbp"
+),
+
+derived_columns AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    volume,
+    changeperc,
+    TRADEDATE::TEXT AS DATE_KEY,
+    'CSV_WHEAT_GBP'::TEXT AS RECORD_SOURCE
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    volume,
+    changeperc,
+    DATE_KEY,
+    RECORD_SOURCE,
+
+    CAST((MD5(NULLIF(UPPER(TRIM(CAST(TRADEDATE AS VARCHAR))), ''))) AS TEXT) AS DATE_PK,
+    CAST(MD5(CONCAT_WS('||',
+        COALESCE(NULLIF(UPPER(TRIM(CAST(CHANGEPERC AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(HIGH AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(LOW AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(OPEN AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(PRICE AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(VOLUME AS VARCHAR))), ''), '^^')
+    )) AS TEXT) AS DATE_HASHDIFF
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    volume,
+    changeperc,
+    DATE_KEY,
+    RECORD_SOURCE,
+    DATE_PK,
+    DATE_HASHDIFF
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+)
+
+SELECT *, 
+       current_timestamp AS LOAD_DATE,
+       current_timestamp AS EFFECTIVE_FROM
+FROM staging
+  );
+
+2022-02-07 22:20:43.376052 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:43.376548 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_rate_gbp_usd"} */
+
+  create view "postgres"."public"."v_stg_rate_gbp_usd__dbt_tmp" as (
+    
+
+
+
+
+
+
+
+
+WITH staging AS (
+-- Generated by dbtvault.
+
+
+
+WITH source_data AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    changeperc
+
+    FROM "postgres"."public"."source_rate_gbp_usd"
+),
+
+derived_columns AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    changeperc,
+    TRADEDATE::TEXT AS DATE_KEY,
+    'CSV_WHEAT_RATE_GBP_USD'::TEXT AS RECORD_SOURCE
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    changeperc,
+    DATE_KEY,
+    RECORD_SOURCE,
+
+    CAST((MD5(NULLIF(UPPER(TRIM(CAST(TRADEDATE AS VARCHAR))), ''))) AS TEXT) AS DATE_PK,
+    CAST(MD5(CONCAT_WS('||',
+        COALESCE(NULLIF(UPPER(TRIM(CAST(CHANGEPERC AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(HIGH AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(LOW AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(OPEN AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(PRICE AS VARCHAR))), ''), '^^')
+    )) AS TEXT) AS DATE_HASHDIFF
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    changeperc,
+    DATE_KEY,
+    RECORD_SOURCE,
+    DATE_PK,
+    DATE_HASHDIFF
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+)
+
+SELECT *, 
+       current_timestamp AS LOAD_DATE,
+       current_timestamp AS EFFECTIVE_FROM
+FROM staging
+  );
+
+2022-02-07 22:20:43.504622 (Thread-2): SQL status: CREATE VIEW in 0.13 seconds
+2022-02-07 22:20:43.505109 (Thread-1): SQL status: CREATE VIEW in 0.13 seconds
+2022-02-07 22:20:43.555102 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:43.555634 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:43.556056 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_gbp"} */
+alter table "postgres"."public"."v_stg_wheat_gbp" rename to "v_stg_wheat_gbp__dbt_backup"
+2022-02-07 22:20:43.556553 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_rate_gbp_usd"} */
+alter table "postgres"."public"."v_stg_rate_gbp_usd" rename to "v_stg_rate_gbp_usd__dbt_backup"
+2022-02-07 22:20:43.567801 (Thread-2): SQL status: ALTER TABLE in 0.01 seconds
+2022-02-07 22:20:43.585413 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:43.586064 (Thread-1): SQL status: ALTER TABLE in 0.03 seconds
+2022-02-07 22:20:43.586684 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_gbp"} */
+alter table "postgres"."public"."v_stg_wheat_gbp__dbt_tmp" rename to "v_stg_wheat_gbp"
+2022-02-07 22:20:43.607472 (Thread-2): SQL status: ALTER TABLE in 0.01 seconds
+2022-02-07 22:20:43.608372 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:43.619459 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_rate_gbp_usd"} */
+alter table "postgres"."public"."v_stg_rate_gbp_usd__dbt_tmp" rename to "v_stg_rate_gbp_usd"
+2022-02-07 22:20:43.627299 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: COMMIT
+2022-02-07 22:20:43.627928 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:43.628294 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: COMMIT
+2022-02-07 22:20:43.629112 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:43.633457 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: COMMIT
+2022-02-07 22:20:43.633881 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:43.634196 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: COMMIT
+2022-02-07 22:20:43.643411 (Thread-2): SQL status: COMMIT in 0.01 seconds
+2022-02-07 22:20:43.663937 (Thread-1): SQL status: COMMIT in 0.03 seconds
+2022-02-07 22:20:43.666083 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_gbp".
+2022-02-07 22:20:43.672008 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_rate_gbp_usd".
+2022-02-07 22:20:43.672451 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_gbp"} */
+drop view if exists "postgres"."public"."v_stg_wheat_gbp__dbt_backup" cascade
+2022-02-07 22:20:43.673009 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_rate_gbp_usd"} */
+drop view if exists "postgres"."public"."v_stg_rate_gbp_usd__dbt_backup" cascade
+2022-02-07 22:20:43.692168 (Thread-2): SQL status: DROP VIEW in 0.02 seconds
+2022-02-07 22:20:43.699753 (Thread-1): SQL status: DROP VIEW in 0.03 seconds
+2022-02-07 22:20:43.699625 (Thread-2): finished collecting timing info
+2022-02-07 22:20:43.705754 (Thread-1): finished collecting timing info
+2022-02-07 22:20:43.706662 (Thread-2): On model.project_otus_dbt.v_stg_wheat_gbp: Close
+2022-02-07 22:20:43.707258 (Thread-1): On model.project_otus_dbt.v_stg_rate_gbp_usd: Close
+2022-02-07 22:20:43.711013 (Thread-2): 01:20:43 | 2 of 18 OK created view model public.v_stg_wheat_gbp................. [CREATE VIEW in 1.06s]
+2022-02-07 22:20:43.720492 (Thread-1): 01:20:43 | 1 of 18 OK created view model public.v_stg_rate_gbp_usd.............. [CREATE VIEW in 1.07s]
+2022-02-07 22:20:43.721138 (Thread-2): Finished running node model.project_otus_dbt.v_stg_wheat_gbp
+2022-02-07 22:20:43.721786 (Thread-1): Finished running node model.project_otus_dbt.v_stg_rate_gbp_usd
+2022-02-07 22:20:43.722463 (Thread-2): Began running node model.project_otus_dbt.v_stg_wheat_msk
+2022-02-07 22:20:43.723645 (Thread-1): Began running node model.project_otus_dbt.v_stg_wheat_usa
+2022-02-07 22:20:43.728849 (Thread-2): 01:20:43 | 3 of 18 START view model public.v_stg_wheat_msk...................... [RUN]
+2022-02-07 22:20:43.731629 (Thread-1): 01:20:43 | 4 of 18 START view model public.v_stg_wheat_usa...................... [RUN]
+2022-02-07 22:20:43.732826 (Thread-2): Acquiring new postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:43.733762 (Thread-1): Acquiring new postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:43.734171 (Thread-2): Compiling model.project_otus_dbt.v_stg_wheat_msk
+2022-02-07 22:20:43.734583 (Thread-1): Compiling model.project_otus_dbt.v_stg_wheat_usa
+2022-02-07 22:20:43.824344 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:43.832559 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: BEGIN
+2022-02-07 22:20:43.838320 (Thread-2): Opening a new connection, currently in state closed
+2022-02-07 22:20:43.849677 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:43.850142 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: BEGIN
+2022-02-07 22:20:43.850426 (Thread-1): Opening a new connection, currently in state closed
+2022-02-07 22:20:43.863756 (Thread-2): SQL status: BEGIN in 0.03 seconds
+2022-02-07 22:20:43.864380 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:43.864878 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_msk"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'source_wheat_msk'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:43.866427 (Thread-1): SQL status: BEGIN in 0.02 seconds
+2022-02-07 22:20:43.866841 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:43.867120 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_usa"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'source_wheat_usa'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:43.896214 (Thread-1): SQL status: SELECT 7 in 0.03 seconds
+2022-02-07 22:20:43.914128 (Thread-2): SQL status: SELECT 18 in 0.05 seconds
+2022-02-07 22:20:43.914541 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:43.925750 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_usa"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'source_wheat_usa'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:43.936113 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:43.936650 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_msk"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'source_wheat_msk'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:43.945907 (Thread-2): SQL status: SELECT 18 in 0.01 seconds
+2022-02-07 22:20:43.952023 (Thread-1): SQL status: SELECT 7 in 0.02 seconds
+2022-02-07 22:20:43.956270 (Thread-2): Writing injected SQL for node "model.project_otus_dbt.v_stg_wheat_msk"
+2022-02-07 22:20:43.970158 (Thread-1): Writing injected SQL for node "model.project_otus_dbt.v_stg_wheat_usa"
+2022-02-07 22:20:43.972894 (Thread-1): finished collecting timing info
+2022-02-07 22:20:43.974079 (Thread-2): finished collecting timing info
+2022-02-07 22:20:43.992113 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:43.997847 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_usa"} */
+drop view if exists "postgres"."public"."v_stg_wheat_usa__dbt_tmp" cascade
+2022-02-07 22:20:44.000266 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:44.000731 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_msk"} */
+drop view if exists "postgres"."public"."v_stg_wheat_msk__dbt_tmp" cascade
+2022-02-07 22:20:44.002061 (Thread-2): SQL status: DROP VIEW in 0.00 seconds
+2022-02-07 22:20:44.002344 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2022-02-07 22:20:44.007775 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:44.014209 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:44.014500 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_msk"} */
+drop view if exists "postgres"."public"."v_stg_wheat_msk__dbt_backup" cascade
+2022-02-07 22:20:44.014829 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_usa"} */
+drop view if exists "postgres"."public"."v_stg_wheat_usa__dbt_backup" cascade
+2022-02-07 22:20:44.016807 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2022-02-07 22:20:44.017127 (Thread-2): SQL status: DROP VIEW in 0.00 seconds
+2022-02-07 22:20:44.018887 (Thread-1): Writing runtime SQL for node "model.project_otus_dbt.v_stg_wheat_usa"
+2022-02-07 22:20:44.022345 (Thread-2): Writing runtime SQL for node "model.project_otus_dbt.v_stg_wheat_msk"
+2022-02-07 22:20:44.025430 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:44.026048 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_usa"} */
+
+  create view "postgres"."public"."v_stg_wheat_usa__dbt_tmp" as (
+    
+
+
+
+
+
+
+
+
+WITH staging AS (
+-- Generated by dbtvault.
+
+
+
+WITH source_data AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    volume,
+    changeperc
+
+    FROM "postgres"."public"."source_wheat_usa"
+),
+
+derived_columns AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    volume,
+    changeperc,
+    TRADEDATE::TEXT AS DATE_KEY,
+    'CSV_WHEAT_USA'::TEXT AS RECORD_SOURCE
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    volume,
+    changeperc,
+    DATE_KEY,
+    RECORD_SOURCE,
+
+    CAST((MD5(NULLIF(UPPER(TRIM(CAST(TRADEDATE AS VARCHAR))), ''))) AS TEXT) AS DATE_PK,
+    CAST(MD5(CONCAT_WS('||',
+        COALESCE(NULLIF(UPPER(TRIM(CAST(CHANGEPERC AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(HIGH AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(LOW AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(OPEN AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(PRICE AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(VOLUME AS VARCHAR))), ''), '^^')
+    )) AS TEXT) AS DATE_HASHDIFF
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    tradedate,
+    price,
+    open,
+    high,
+    low,
+    volume,
+    changeperc,
+    DATE_KEY,
+    RECORD_SOURCE,
+    DATE_PK,
+    DATE_HASHDIFF
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+)
+
+SELECT *, 
+       current_timestamp AS LOAD_DATE,
+       current_timestamp AS EFFECTIVE_FROM
+FROM staging
+  );
+
+2022-02-07 22:20:44.026733 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:44.027129 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_msk"} */
+
+  create view "postgres"."public"."v_stg_wheat_msk__dbt_tmp" as (
+    
+
+
+
+
+
+
+
+
+WITH staging AS (
+-- Generated by dbtvault.
+
+
+
+WITH source_data AS (
+
+    SELECT
+
+    boardid,
+    secid,
+    tradedate,
+    shortname,
+    name,
+    close,
+    open,
+    high,
+    low,
+    value,
+    duration,
+    yield,
+    decimals,
+    capitalization,
+    currencyid,
+    divisor,
+    tradingsession,
+    volume
+
+    FROM "postgres"."public"."source_wheat_msk"
+),
+
+derived_columns AS (
+
+    SELECT
+
+    boardid,
+    secid,
+    tradedate,
+    shortname,
+    name,
+    close,
+    open,
+    high,
+    low,
+    value,
+    duration,
+    yield,
+    decimals,
+    capitalization,
+    currencyid,
+    divisor,
+    tradingsession,
+    volume,
+    TRADEDATE::TEXT AS DATE_KEY,
+    'CSV_WHEAT_MSK'::TEXT AS RECORD_SOURCE
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    boardid,
+    secid,
+    tradedate,
+    shortname,
+    name,
+    close,
+    open,
+    high,
+    low,
+    value,
+    duration,
+    yield,
+    decimals,
+    capitalization,
+    currencyid,
+    divisor,
+    tradingsession,
+    volume,
+    DATE_KEY,
+    RECORD_SOURCE,
+
+    CAST((MD5(NULLIF(UPPER(TRIM(CAST(TRADEDATE AS VARCHAR))), ''))) AS TEXT) AS DATE_PK,
+    CAST(MD5(CONCAT_WS('||',
+        COALESCE(NULLIF(UPPER(TRIM(CAST(CLOSE AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(HIGH AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(LOW AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(NAME AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(OPEN AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(VALUE AS VARCHAR))), ''), '^^'),
+        COALESCE(NULLIF(UPPER(TRIM(CAST(VOLUME AS VARCHAR))), ''), '^^')
+    )) AS TEXT) AS DATE_HASHDIFF
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    boardid,
+    secid,
+    tradedate,
+    shortname,
+    name,
+    close,
+    open,
+    high,
+    low,
+    value,
+    duration,
+    yield,
+    decimals,
+    capitalization,
+    currencyid,
+    divisor,
+    tradingsession,
+    volume,
+    DATE_KEY,
+    RECORD_SOURCE,
+    DATE_PK,
+    DATE_HASHDIFF
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+)
+
+SELECT *, 
+       current_timestamp AS LOAD_DATE,
+       current_timestamp AS EFFECTIVE_FROM
+FROM staging
+  );
+
+2022-02-07 22:20:44.036887 (Thread-1): SQL status: CREATE VIEW in 0.01 seconds
+2022-02-07 22:20:44.047580 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:44.047949 (Thread-2): SQL status: CREATE VIEW in 0.02 seconds
+2022-02-07 22:20:44.048326 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_usa"} */
+alter table "postgres"."public"."v_stg_wheat_usa" rename to "v_stg_wheat_usa__dbt_backup"
+2022-02-07 22:20:44.059162 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:44.060293 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_msk"} */
+alter table "postgres"."public"."v_stg_wheat_msk" rename to "v_stg_wheat_msk__dbt_backup"
+2022-02-07 22:20:44.064391 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:44.070015 (Thread-2): SQL status: ALTER TABLE in 0.01 seconds
+2022-02-07 22:20:44.071498 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:44.078369 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:44.078803 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_usa"} */
+alter table "postgres"."public"."v_stg_wheat_usa__dbt_tmp" rename to "v_stg_wheat_usa"
+2022-02-07 22:20:44.079290 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_msk"} */
+alter table "postgres"."public"."v_stg_wheat_msk__dbt_tmp" rename to "v_stg_wheat_msk"
+2022-02-07 22:20:44.082015 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:44.084450 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: COMMIT
+2022-02-07 22:20:44.084895 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:44.085299 (Thread-2): SQL status: ALTER TABLE in 0.01 seconds
+2022-02-07 22:20:44.085680 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: COMMIT
+2022-02-07 22:20:44.088030 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: COMMIT
+2022-02-07 22:20:44.088802 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:44.089147 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: COMMIT
+2022-02-07 22:20:44.098501 (Thread-1): SQL status: COMMIT in 0.01 seconds
+2022-02-07 22:20:44.098843 (Thread-2): SQL status: COMMIT in 0.01 seconds
+2022-02-07 22:20:44.105848 (Thread-1): Using postgres connection "model.project_otus_dbt.v_stg_wheat_usa".
+2022-02-07 22:20:44.110979 (Thread-2): Using postgres connection "model.project_otus_dbt.v_stg_wheat_msk".
+2022-02-07 22:20:44.111420 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_usa"} */
+drop view if exists "postgres"."public"."v_stg_wheat_usa__dbt_backup" cascade
+2022-02-07 22:20:44.111762 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.v_stg_wheat_msk"} */
+drop view if exists "postgres"."public"."v_stg_wheat_msk__dbt_backup" cascade
+2022-02-07 22:20:44.119642 (Thread-2): SQL status: DROP VIEW in 0.01 seconds
+2022-02-07 22:20:44.127305 (Thread-2): finished collecting timing info
+2022-02-07 22:20:44.127872 (Thread-1): SQL status: DROP VIEW in 0.02 seconds
+2022-02-07 22:20:44.128304 (Thread-2): On model.project_otus_dbt.v_stg_wheat_msk: Close
+2022-02-07 22:20:44.132985 (Thread-1): finished collecting timing info
+2022-02-07 22:20:44.133840 (Thread-1): On model.project_otus_dbt.v_stg_wheat_usa: Close
+2022-02-07 22:20:44.136837 (Thread-2): 01:20:44 | 3 of 18 OK created view model public.v_stg_wheat_msk................. [CREATE VIEW in 0.40s]
+2022-02-07 22:20:44.137361 (Thread-2): Finished running node model.project_otus_dbt.v_stg_wheat_msk
+2022-02-07 22:20:44.143054 (Thread-2): Began running node model.project_otus_dbt.dim_day
+2022-02-07 22:20:44.145496 (Thread-1): 01:20:44 | 4 of 18 OK created view model public.v_stg_wheat_usa................. [CREATE VIEW in 0.41s]
+2022-02-07 22:20:44.148528 (Thread-2): 01:20:44 | 5 of 18 START table model public.dim_day............................. [RUN]
+2022-02-07 22:20:44.149355 (Thread-1): Finished running node model.project_otus_dbt.v_stg_wheat_usa
+2022-02-07 22:20:44.150382 (Thread-2): Acquiring new postgres connection "model.project_otus_dbt.dim_day".
+2022-02-07 22:20:44.150919 (Thread-1): Began running node model.project_otus_dbt.dim_week
+2022-02-07 22:20:44.151989 (Thread-2): Compiling model.project_otus_dbt.dim_day
+2022-02-07 22:20:44.154407 (Thread-1): 01:20:44 | 6 of 18 START table model public.dim_week............................ [RUN]
+2022-02-07 22:20:44.168038 (Thread-2): Writing injected SQL for node "model.project_otus_dbt.dim_day"
+2022-02-07 22:20:44.168914 (Thread-1): Acquiring new postgres connection "model.project_otus_dbt.dim_week".
+2022-02-07 22:20:44.169999 (Thread-1): Compiling model.project_otus_dbt.dim_week
+2022-02-07 22:20:44.192118 (Thread-1): Writing injected SQL for node "model.project_otus_dbt.dim_week"
+2022-02-07 22:20:44.192561 (Thread-2): finished collecting timing info
+2022-02-07 22:20:44.216314 (Thread-1): finished collecting timing info
+2022-02-07 22:20:44.231590 (Thread-2): Using postgres connection "model.project_otus_dbt.dim_day".
+2022-02-07 22:20:44.237224 (Thread-2): On model.project_otus_dbt.dim_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_day"} */
+drop table if exists "postgres"."public"."dim_day__dbt_tmp" cascade
+2022-02-07 22:20:44.242878 (Thread-2): Opening a new connection, currently in state closed
+2022-02-07 22:20:44.243383 (Thread-1): Using postgres connection "model.project_otus_dbt.dim_week".
+2022-02-07 22:20:44.244004 (Thread-1): On model.project_otus_dbt.dim_week: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_week"} */
+drop table if exists "postgres"."public"."dim_week__dbt_tmp" cascade
+2022-02-07 22:20:44.244302 (Thread-1): Opening a new connection, currently in state closed
+2022-02-07 22:20:44.260801 (Thread-1): SQL status: DROP TABLE in 0.02 seconds
+2022-02-07 22:20:44.261153 (Thread-2): SQL status: DROP TABLE in 0.02 seconds
+2022-02-07 22:20:44.266110 (Thread-1): Using postgres connection "model.project_otus_dbt.dim_week".
+2022-02-07 22:20:44.272321 (Thread-2): Using postgres connection "model.project_otus_dbt.dim_day".
+2022-02-07 22:20:44.272673 (Thread-1): On model.project_otus_dbt.dim_week: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_week"} */
+drop table if exists "postgres"."public"."dim_week__dbt_backup" cascade
+2022-02-07 22:20:44.273114 (Thread-2): On model.project_otus_dbt.dim_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_day"} */
+drop table if exists "postgres"."public"."dim_day__dbt_backup" cascade
+2022-02-07 22:20:44.275082 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2022-02-07 22:20:44.275383 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2022-02-07 22:20:44.283061 (Thread-1): Writing runtime SQL for node "model.project_otus_dbt.dim_week"
+2022-02-07 22:20:44.285479 (Thread-2): Writing runtime SQL for node "model.project_otus_dbt.dim_day"
+2022-02-07 22:20:44.287035 (Thread-2): Using postgres connection "model.project_otus_dbt.dim_day".
+2022-02-07 22:20:44.287633 (Thread-1): Using postgres connection "model.project_otus_dbt.dim_week".
+2022-02-07 22:20:44.288096 (Thread-2): On model.project_otus_dbt.dim_day: BEGIN
+2022-02-07 22:20:44.288839 (Thread-1): On model.project_otus_dbt.dim_week: BEGIN
+2022-02-07 22:20:44.290956 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:44.291342 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:44.291688 (Thread-2): Using postgres connection "model.project_otus_dbt.dim_day".
+2022-02-07 22:20:44.292090 (Thread-1): Using postgres connection "model.project_otus_dbt.dim_week".
+2022-02-07 22:20:44.292423 (Thread-2): On model.project_otus_dbt.dim_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_day"} */
+
+
+  create  table "postgres"."public"."dim_day__dbt_tmp"
+  as (
+    with dim_day as (
+    select date::date,
+        extract('isodow' from date) as dow,
+        to_char(date, 'dy') as day,
+        extract('week' from date) as week,
+        extract('year' from date)*100+extract('week' from date) as week_id,
+        extract('year' from date) as year,
+        extract('day' from (date + interval '2 month - 1 day')) = 29 as leap
+        from generate_series(date '2012-01-01',
+            date '2025-12-31',
+            interval '1 day')
+        as t(date)
+        )
+
+select * from dim_day
+order by date desc
+  );
+2022-02-07 22:20:44.292708 (Thread-1): On model.project_otus_dbt.dim_week: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_week"} */
+
+
+  create  table "postgres"."public"."dim_week__dbt_tmp"
+  as (
+    with dim_week as (
+    select
+        extract('year' from date) as year,
+        extract('week' from date) as week,
+        extract('year' from date)*100+extract('week' from date) as week_id
+
+        from generate_series(date '2012-01-01',
+            date '2025-12-31',
+            interval '1 week')
+        as t(date)
+)
+
+select * from dim_week
+  );
+2022-02-07 22:20:44.380415 (Thread-1): SQL status: SELECT 731 in 0.09 seconds
+2022-02-07 22:20:44.400701 (Thread-1): Using postgres connection "model.project_otus_dbt.dim_week".
+2022-02-07 22:20:44.401200 (Thread-1): On model.project_otus_dbt.dim_week: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_week"} */
+alter table "postgres"."public"."dim_week" rename to "dim_week__dbt_backup"
+2022-02-07 22:20:44.404600 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:44.413226 (Thread-1): Using postgres connection "model.project_otus_dbt.dim_week".
+2022-02-07 22:20:44.413667 (Thread-1): On model.project_otus_dbt.dim_week: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_week"} */
+alter table "postgres"."public"."dim_week__dbt_tmp" rename to "dim_week"
+2022-02-07 22:20:44.415893 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:44.418668 (Thread-1): On model.project_otus_dbt.dim_week: COMMIT
+2022-02-07 22:20:44.419079 (Thread-1): Using postgres connection "model.project_otus_dbt.dim_week".
+2022-02-07 22:20:44.419554 (Thread-1): On model.project_otus_dbt.dim_week: COMMIT
+2022-02-07 22:20:44.429165 (Thread-1): SQL status: COMMIT in 0.01 seconds
+2022-02-07 22:20:44.435722 (Thread-1): Using postgres connection "model.project_otus_dbt.dim_week".
+2022-02-07 22:20:44.436264 (Thread-2): SQL status: SELECT 5114 in 0.14 seconds
+2022-02-07 22:20:44.436636 (Thread-1): On model.project_otus_dbt.dim_week: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_week"} */
+drop table if exists "postgres"."public"."dim_week__dbt_backup" cascade
+2022-02-07 22:20:44.447441 (Thread-2): Using postgres connection "model.project_otus_dbt.dim_day".
+2022-02-07 22:20:44.448065 (Thread-2): On model.project_otus_dbt.dim_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_day"} */
+alter table "postgres"."public"."dim_day" rename to "dim_day__dbt_backup"
+2022-02-07 22:20:44.450282 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:44.457541 (Thread-2): Using postgres connection "model.project_otus_dbt.dim_day".
+2022-02-07 22:20:44.459219 (Thread-2): On model.project_otus_dbt.dim_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_day"} */
+alter table "postgres"."public"."dim_day__dbt_tmp" rename to "dim_day"
+2022-02-07 22:20:44.461773 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:44.464060 (Thread-2): On model.project_otus_dbt.dim_day: COMMIT
+2022-02-07 22:20:44.464357 (Thread-2): Using postgres connection "model.project_otus_dbt.dim_day".
+2022-02-07 22:20:44.464540 (Thread-2): On model.project_otus_dbt.dim_day: COMMIT
+2022-02-07 22:20:44.467350 (Thread-2): SQL status: COMMIT in 0.00 seconds
+2022-02-07 22:20:44.474218 (Thread-2): Using postgres connection "model.project_otus_dbt.dim_day".
+2022-02-07 22:20:44.474908 (Thread-2): On model.project_otus_dbt.dim_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dim_day"} */
+drop table if exists "postgres"."public"."dim_day__dbt_backup" cascade
+2022-02-07 22:20:44.482047 (Thread-2): SQL status: DROP TABLE in 0.01 seconds
+2022-02-07 22:20:44.482406 (Thread-1): SQL status: DROP TABLE in 0.03 seconds
+2022-02-07 22:20:44.488556 (Thread-2): finished collecting timing info
+2022-02-07 22:20:44.494694 (Thread-1): finished collecting timing info
+2022-02-07 22:20:44.495437 (Thread-2): On model.project_otus_dbt.dim_day: Close
+2022-02-07 22:20:44.495842 (Thread-1): On model.project_otus_dbt.dim_week: Close
+2022-02-07 22:20:44.500230 (Thread-2): 01:20:44 | 5 of 18 OK created table model public.dim_day........................ [SELECT 5114 in 0.35s]
+2022-02-07 22:20:44.504856 (Thread-1): 01:20:44 | 6 of 18 OK created table model public.dim_week....................... [SELECT 731 in 0.33s]
+2022-02-07 22:20:44.505646 (Thread-2): Finished running node model.project_otus_dbt.dim_day
+2022-02-07 22:20:44.506507 (Thread-1): Finished running node model.project_otus_dbt.dim_week
+2022-02-07 22:20:44.507277 (Thread-2): Began running node model.project_otus_dbt.hub_wheat_gbp
+2022-02-07 22:20:44.508391 (Thread-1): Began running node model.project_otus_dbt.sat_wheat_gbp_details
+2022-02-07 22:20:44.511423 (Thread-2): 01:20:44 | 7 of 18 START incremental model public.hub_wheat_gbp................. [RUN]
+2022-02-07 22:20:44.514281 (Thread-1): 01:20:44 | 8 of 18 START incremental model public.sat_wheat_gbp_details......... [RUN]
+2022-02-07 22:20:44.515575 (Thread-2): Acquiring new postgres connection "model.project_otus_dbt.hub_wheat_gbp".
+2022-02-07 22:20:44.516621 (Thread-1): Acquiring new postgres connection "model.project_otus_dbt.sat_wheat_gbp_details".
+2022-02-07 22:20:44.517029 (Thread-2): Compiling model.project_otus_dbt.hub_wheat_gbp
+2022-02-07 22:20:44.517453 (Thread-1): Compiling model.project_otus_dbt.sat_wheat_gbp_details
+2022-02-07 22:20:44.581076 (Thread-2): Writing injected SQL for node "model.project_otus_dbt.hub_wheat_gbp"
+2022-02-07 22:20:44.622137 (Thread-2): finished collecting timing info
+2022-02-07 22:20:44.624562 (Thread-1): Writing injected SQL for node "model.project_otus_dbt.sat_wheat_gbp_details"
+2022-02-07 22:20:44.657084 (Thread-1): finished collecting timing info
+2022-02-07 22:20:44.812241 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_gbp_details".
+2022-02-07 22:20:44.814217 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_gbp".
+2022-02-07 22:20:44.815061 (Thread-1): On model.project_otus_dbt.sat_wheat_gbp_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_gbp_details"} */
+
+    
+
+  create temporary table "sat_wheat_gbp_details__dbt_tmp012044780595"
+  as (
+    -- Generated by dbtvault.
+
+WITH source_data AS (
+    SELECT a.DATE_PK, a.DATE_HASHDIFF, a.TRADEDATE, a.PRICE, a.OPEN, a.HIGH, a.LOW, a.VOLUME, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM "postgres"."public"."v_stg_wheat_gbp" AS a
+),
+
+update_records AS (
+    SELECT a.DATE_PK, a.DATE_HASHDIFF, a.TRADEDATE, a.PRICE, a.OPEN, a.HIGH, a.LOW, a.VOLUME, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM "postgres"."public"."sat_wheat_gbp_details" as a
+    JOIN source_data as b
+    ON a.DATE_PK = b.DATE_PK
+),
+
+latest_records AS (
+
+SELECT * FROM (    
+    SELECT c.DATE_PK, c.DATE_HASHDIFF, c.LOAD_DATE,
+           CASE WHEN RANK()
+           OVER (PARTITION BY c.DATE_PK
+           ORDER BY c.LOAD_DATE DESC) = 1
+    THEN 'Y' ELSE 'N' END AS latest
+    FROM update_records as c
+) as s
+WHERE latest = 'Y'
+
+),
+
+records_to_insert AS (
+    SELECT DISTINCT e.DATE_PK, e.DATE_HASHDIFF, e.TRADEDATE, e.PRICE, e.OPEN, e.HIGH, e.LOW, e.VOLUME, e.EFFECTIVE_FROM, e.LOAD_DATE, e.RECORD_SOURCE
+    FROM source_data AS e
+    LEFT JOIN latest_records
+    ON latest_records.DATE_HASHDIFF = e.DATE_HASHDIFF
+    WHERE latest_records.DATE_HASHDIFF IS NULL
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+2022-02-07 22:20:44.815969 (Thread-2): On model.project_otus_dbt.hub_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_gbp"} */
+
+    
+
+  create temporary table "hub_wheat_gbp__dbt_tmp012044784934"
+  as (
+    -- Generated by dbtvault.
+
+WITH row_rank_1 AS (
+
+SELECT * FROM (
+    SELECT DATE_PK, DATE_KEY, LOAD_DATE, RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY DATE_PK
+               ORDER BY LOAD_DATE ASC
+           ) AS row_number
+    FROM "postgres"."public"."v_stg_wheat_gbp"
+
+) as h
+WHERE row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.DATE_PK, a.DATE_KEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+    LEFT JOIN "postgres"."public"."hub_wheat_gbp" AS d
+    ON a.DATE_PK = d.DATE_PK
+    WHERE d.DATE_PK IS NULL
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+2022-02-07 22:20:44.816689 (Thread-1): Opening a new connection, currently in state closed
+2022-02-07 22:20:44.817242 (Thread-2): Opening a new connection, currently in state closed
+2022-02-07 22:20:44.908966 (Thread-2): SQL status: SELECT 0 in 0.09 seconds
+2022-02-07 22:20:44.922412 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_gbp".
+2022-02-07 22:20:44.922940 (Thread-2): On model.project_otus_dbt.hub_wheat_gbp: BEGIN
+2022-02-07 22:20:44.925614 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:44.926657 (Thread-1): SQL status: SELECT 0 in 0.11 seconds
+2022-02-07 22:20:44.927253 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_gbp".
+2022-02-07 22:20:44.933807 (Thread-2): On model.project_otus_dbt.hub_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_gbp"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'hub_wheat_gbp__dbt_tmp012044784934'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:44.947677 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_gbp_details".
+2022-02-07 22:20:44.948185 (Thread-1): On model.project_otus_dbt.sat_wheat_gbp_details: BEGIN
+2022-02-07 22:20:44.951100 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:44.951681 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_gbp_details".
+2022-02-07 22:20:44.952322 (Thread-1): On model.project_otus_dbt.sat_wheat_gbp_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_gbp_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'sat_wheat_gbp_details__dbt_tmp012044780595'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:44.976864 (Thread-2): SQL status: SELECT 4 in 0.04 seconds
+2022-02-07 22:20:44.986595 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_gbp".
+2022-02-07 22:20:44.987294 (Thread-2): On model.project_otus_dbt.hub_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_gbp"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'hub_wheat_gbp'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.002450 (Thread-1): SQL status: SELECT 11 in 0.05 seconds
+2022-02-07 22:20:45.017810 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_gbp_details".
+2022-02-07 22:20:45.018560 (Thread-1): On model.project_otus_dbt.sat_wheat_gbp_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_gbp_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'sat_wheat_gbp_details'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.034371 (Thread-2): SQL status: SELECT 4 in 0.05 seconds
+2022-02-07 22:20:45.054508 (Thread-1): SQL status: SELECT 11 in 0.04 seconds
+2022-02-07 22:20:45.080102 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_gbp".
+2022-02-07 22:20:45.081525 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_gbp_details".
+2022-02-07 22:20:45.082017 (Thread-2): On model.project_otus_dbt.hub_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_gbp"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'hub_wheat_gbp'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.082628 (Thread-1): On model.project_otus_dbt.sat_wheat_gbp_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_gbp_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'sat_wheat_gbp_details'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.089928 (Thread-2): SQL status: SELECT 4 in 0.01 seconds
+2022-02-07 22:20:45.092570 (Thread-2): Writing runtime SQL for node "model.project_otus_dbt.hub_wheat_gbp"
+2022-02-07 22:20:45.093677 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_gbp".
+2022-02-07 22:20:45.094065 (Thread-2): On model.project_otus_dbt.hub_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_gbp"} */
+
+      
+
+    insert into "postgres"."public"."hub_wheat_gbp" ("date_pk", "date_key", "load_date", "record_source")
+    (
+       select "date_pk", "date_key", "load_date", "record_source"
+       from "hub_wheat_gbp__dbt_tmp012044784934"
+    );
+  
+2022-02-07 22:20:45.099601 (Thread-1): SQL status: SELECT 11 in 0.02 seconds
+2022-02-07 22:20:45.099975 (Thread-2): SQL status: INSERT 0 0 in 0.01 seconds
+2022-02-07 22:20:45.110382 (Thread-1): Writing runtime SQL for node "model.project_otus_dbt.sat_wheat_gbp_details"
+2022-02-07 22:20:45.117873 (Thread-2): On model.project_otus_dbt.hub_wheat_gbp: COMMIT
+2022-02-07 22:20:45.118735 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_gbp".
+2022-02-07 22:20:45.119135 (Thread-2): On model.project_otus_dbt.hub_wheat_gbp: COMMIT
+2022-02-07 22:20:45.120260 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_gbp_details".
+2022-02-07 22:20:45.120683 (Thread-1): On model.project_otus_dbt.sat_wheat_gbp_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_gbp_details"} */
+
+      
+
+    insert into "postgres"."public"."sat_wheat_gbp_details" ("date_pk", "date_hashdiff", "tradedate", "price", "open", "high", "low", "volume", "effective_from", "load_date", "record_source")
+    (
+       select "date_pk", "date_hashdiff", "tradedate", "price", "open", "high", "low", "volume", "effective_from", "load_date", "record_source"
+       from "sat_wheat_gbp_details__dbt_tmp012044780595"
+    );
+  
+2022-02-07 22:20:45.124752 (Thread-1): SQL status: INSERT 0 0 in 0.00 seconds
+2022-02-07 22:20:45.127064 (Thread-1): On model.project_otus_dbt.sat_wheat_gbp_details: COMMIT
+2022-02-07 22:20:45.127633 (Thread-2): SQL status: COMMIT in 0.01 seconds
+2022-02-07 22:20:45.128092 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_gbp_details".
+2022-02-07 22:20:45.134789 (Thread-2): finished collecting timing info
+2022-02-07 22:20:45.135666 (Thread-1): On model.project_otus_dbt.sat_wheat_gbp_details: COMMIT
+2022-02-07 22:20:45.138793 (Thread-2): On model.project_otus_dbt.hub_wheat_gbp: Close
+2022-02-07 22:20:45.144187 (Thread-2): 01:20:45 | 7 of 18 OK created incremental model public.hub_wheat_gbp............ [INSERT 0 0 in 0.63s]
+2022-02-07 22:20:45.144721 (Thread-2): Finished running node model.project_otus_dbt.hub_wheat_gbp
+2022-02-07 22:20:45.145147 (Thread-2): Began running node model.project_otus_dbt.hub_rate_gbp_usd
+2022-02-07 22:20:45.171111 (Thread-1): SQL status: COMMIT in 0.03 seconds
+2022-02-07 22:20:45.172636 (Thread-2): 01:20:45 | 9 of 18 START incremental model public.hub_rate_gbp_usd.............. [RUN]
+2022-02-07 22:20:45.178923 (Thread-1): finished collecting timing info
+2022-02-07 22:20:45.180827 (Thread-2): Acquiring new postgres connection "model.project_otus_dbt.hub_rate_gbp_usd".
+2022-02-07 22:20:45.181577 (Thread-1): On model.project_otus_dbt.sat_wheat_gbp_details: Close
+2022-02-07 22:20:45.182354 (Thread-2): Compiling model.project_otus_dbt.hub_rate_gbp_usd
+2022-02-07 22:20:45.199771 (Thread-1): 01:20:45 | 8 of 18 OK created incremental model public.sat_wheat_gbp_details.... [INSERT 0 0 in 0.67s]
+2022-02-07 22:20:45.209802 (Thread-1): Finished running node model.project_otus_dbt.sat_wheat_gbp_details
+2022-02-07 22:20:45.225218 (Thread-1): Began running node model.project_otus_dbt.sat_rate_gbp_usd_details
+2022-02-07 22:20:45.233840 (Thread-1): 01:20:45 | 10 of 18 START incremental model public.sat_rate_gbp_usd_details..... [RUN]
+2022-02-07 22:20:45.249628 (Thread-1): Acquiring new postgres connection "model.project_otus_dbt.sat_rate_gbp_usd_details".
+2022-02-07 22:20:45.256354 (Thread-1): Compiling model.project_otus_dbt.sat_rate_gbp_usd_details
+2022-02-07 22:20:45.259334 (Thread-2): Writing injected SQL for node "model.project_otus_dbt.hub_rate_gbp_usd"
+2022-02-07 22:20:45.293148 (Thread-2): finished collecting timing info
+2022-02-07 22:20:45.315452 (Thread-1): Writing injected SQL for node "model.project_otus_dbt.sat_rate_gbp_usd_details"
+2022-02-07 22:20:45.322415 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_rate_gbp_usd".
+2022-02-07 22:20:45.322984 (Thread-2): On model.project_otus_dbt.hub_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_rate_gbp_usd"} */
+
+    
+
+  create temporary table "hub_rate_gbp_usd__dbt_tmp012045318051"
+  as (
+    -- Generated by dbtvault.
+
+WITH row_rank_1 AS (
+
+SELECT * FROM (
+    SELECT DATE_PK, DATE_KEY, LOAD_DATE, RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY DATE_PK
+               ORDER BY LOAD_DATE ASC
+           ) AS row_number
+    FROM "postgres"."public"."v_stg_rate_gbp_usd"
+
+) as h
+WHERE row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.DATE_PK, a.DATE_KEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+    LEFT JOIN "postgres"."public"."hub_rate_gbp_usd" AS d
+    ON a.DATE_PK = d.DATE_PK
+    WHERE d.DATE_PK IS NULL
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+2022-02-07 22:20:45.323481 (Thread-2): Opening a new connection, currently in state closed
+2022-02-07 22:20:45.324576 (Thread-1): finished collecting timing info
+2022-02-07 22:20:45.353306 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_rate_gbp_usd_details".
+2022-02-07 22:20:45.353760 (Thread-1): On model.project_otus_dbt.sat_rate_gbp_usd_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_rate_gbp_usd_details"} */
+
+    
+
+  create temporary table "sat_rate_gbp_usd_details__dbt_tmp012045342524"
+  as (
+    -- Generated by dbtvault.
+
+WITH source_data AS (
+    SELECT a.DATE_PK, a.DATE_HASHDIFF, a.TRADEDATE, a.PRICE, a.OPEN, a.HIGH, a.LOW, a.CHANGEPERC, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM "postgres"."public"."v_stg_rate_gbp_usd" AS a
+),
+
+update_records AS (
+    SELECT a.DATE_PK, a.DATE_HASHDIFF, a.TRADEDATE, a.PRICE, a.OPEN, a.HIGH, a.LOW, a.CHANGEPERC, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM "postgres"."public"."sat_rate_gbp_usd_details" as a
+    JOIN source_data as b
+    ON a.DATE_PK = b.DATE_PK
+),
+
+latest_records AS (
+
+SELECT * FROM (    
+    SELECT c.DATE_PK, c.DATE_HASHDIFF, c.LOAD_DATE,
+           CASE WHEN RANK()
+           OVER (PARTITION BY c.DATE_PK
+           ORDER BY c.LOAD_DATE DESC) = 1
+    THEN 'Y' ELSE 'N' END AS latest
+    FROM update_records as c
+) as s
+WHERE latest = 'Y'
+
+),
+
+records_to_insert AS (
+    SELECT DISTINCT e.DATE_PK, e.DATE_HASHDIFF, e.TRADEDATE, e.PRICE, e.OPEN, e.HIGH, e.LOW, e.CHANGEPERC, e.EFFECTIVE_FROM, e.LOAD_DATE, e.RECORD_SOURCE
+    FROM source_data AS e
+    LEFT JOIN latest_records
+    ON latest_records.DATE_HASHDIFF = e.DATE_HASHDIFF
+    WHERE latest_records.DATE_HASHDIFF IS NULL
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+2022-02-07 22:20:45.354037 (Thread-1): Opening a new connection, currently in state closed
+2022-02-07 22:20:45.391042 (Thread-2): SQL status: SELECT 0 in 0.07 seconds
+2022-02-07 22:20:45.409229 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_rate_gbp_usd".
+2022-02-07 22:20:45.409821 (Thread-2): On model.project_otus_dbt.hub_rate_gbp_usd: BEGIN
+2022-02-07 22:20:45.411842 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:45.412257 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_rate_gbp_usd".
+2022-02-07 22:20:45.412555 (Thread-2): On model.project_otus_dbt.hub_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_rate_gbp_usd"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'hub_rate_gbp_usd__dbt_tmp012045318051'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.431656 (Thread-1): SQL status: SELECT 0 in 0.08 seconds
+2022-02-07 22:20:45.440809 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_rate_gbp_usd_details".
+2022-02-07 22:20:45.441535 (Thread-2): SQL status: SELECT 4 in 0.03 seconds
+2022-02-07 22:20:45.442071 (Thread-1): On model.project_otus_dbt.sat_rate_gbp_usd_details: BEGIN
+2022-02-07 22:20:45.454425 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_rate_gbp_usd".
+2022-02-07 22:20:45.455476 (Thread-2): On model.project_otus_dbt.hub_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_rate_gbp_usd"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'hub_rate_gbp_usd'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.457204 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:45.457690 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_rate_gbp_usd_details".
+2022-02-07 22:20:45.458053 (Thread-1): On model.project_otus_dbt.sat_rate_gbp_usd_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_rate_gbp_usd_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'sat_rate_gbp_usd_details__dbt_tmp012045342524'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.464667 (Thread-2): SQL status: SELECT 4 in 0.01 seconds
+2022-02-07 22:20:45.473897 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_rate_gbp_usd".
+2022-02-07 22:20:45.474255 (Thread-2): On model.project_otus_dbt.hub_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_rate_gbp_usd"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'hub_rate_gbp_usd'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.479809 (Thread-2): SQL status: SELECT 4 in 0.01 seconds
+2022-02-07 22:20:45.481691 (Thread-2): Writing runtime SQL for node "model.project_otus_dbt.hub_rate_gbp_usd"
+2022-02-07 22:20:45.482948 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_rate_gbp_usd".
+2022-02-07 22:20:45.483232 (Thread-2): On model.project_otus_dbt.hub_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_rate_gbp_usd"} */
+
+      
+
+    insert into "postgres"."public"."hub_rate_gbp_usd" ("date_pk", "date_key", "load_date", "record_source")
+    (
+       select "date_pk", "date_key", "load_date", "record_source"
+       from "hub_rate_gbp_usd__dbt_tmp012045318051"
+    );
+  
+2022-02-07 22:20:45.484995 (Thread-2): SQL status: INSERT 0 0 in 0.00 seconds
+2022-02-07 22:20:45.487161 (Thread-2): On model.project_otus_dbt.hub_rate_gbp_usd: COMMIT
+2022-02-07 22:20:45.487518 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_rate_gbp_usd".
+2022-02-07 22:20:45.487879 (Thread-2): On model.project_otus_dbt.hub_rate_gbp_usd: COMMIT
+2022-02-07 22:20:45.489630 (Thread-1): SQL status: SELECT 11 in 0.03 seconds
+2022-02-07 22:20:45.497275 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_rate_gbp_usd_details".
+2022-02-07 22:20:45.497602 (Thread-2): SQL status: COMMIT in 0.01 seconds
+2022-02-07 22:20:45.497871 (Thread-1): On model.project_otus_dbt.sat_rate_gbp_usd_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_rate_gbp_usd_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'sat_rate_gbp_usd_details'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.500861 (Thread-2): finished collecting timing info
+2022-02-07 22:20:45.501718 (Thread-2): On model.project_otus_dbt.hub_rate_gbp_usd: Close
+2022-02-07 22:20:45.506388 (Thread-2): 01:20:45 | 9 of 18 OK created incremental model public.hub_rate_gbp_usd......... [INSERT 0 0 in 0.32s]
+2022-02-07 22:20:45.507304 (Thread-2): Finished running node model.project_otus_dbt.hub_rate_gbp_usd
+2022-02-07 22:20:45.508177 (Thread-2): Began running node model.project_otus_dbt.hub_wheat_msk
+2022-02-07 22:20:45.511181 (Thread-2): 01:20:45 | 11 of 18 START incremental model public.hub_wheat_msk................ [RUN]
+2022-02-07 22:20:45.511464 (Thread-1): SQL status: SELECT 11 in 0.01 seconds
+2022-02-07 22:20:45.512195 (Thread-2): Acquiring new postgres connection "model.project_otus_dbt.hub_wheat_msk".
+2022-02-07 22:20:45.522487 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_rate_gbp_usd_details".
+2022-02-07 22:20:45.523172 (Thread-2): Compiling model.project_otus_dbt.hub_wheat_msk
+2022-02-07 22:20:45.523802 (Thread-1): On model.project_otus_dbt.sat_rate_gbp_usd_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_rate_gbp_usd_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'sat_rate_gbp_usd_details'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.548843 (Thread-1): SQL status: SELECT 11 in 0.01 seconds
+2022-02-07 22:20:45.557978 (Thread-1): Writing runtime SQL for node "model.project_otus_dbt.sat_rate_gbp_usd_details"
+2022-02-07 22:20:45.568209 (Thread-2): Writing injected SQL for node "model.project_otus_dbt.hub_wheat_msk"
+2022-02-07 22:20:45.570720 (Thread-2): finished collecting timing info
+2022-02-07 22:20:45.577048 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_rate_gbp_usd_details".
+2022-02-07 22:20:45.577537 (Thread-1): On model.project_otus_dbt.sat_rate_gbp_usd_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_rate_gbp_usd_details"} */
+
+      
+
+    insert into "postgres"."public"."sat_rate_gbp_usd_details" ("date_pk", "date_hashdiff", "tradedate", "price", "open", "high", "low", "changeperc", "effective_from", "load_date", "record_source")
+    (
+       select "date_pk", "date_hashdiff", "tradedate", "price", "open", "high", "low", "changeperc", "effective_from", "load_date", "record_source"
+       from "sat_rate_gbp_usd_details__dbt_tmp012045342524"
+    );
+  
+2022-02-07 22:20:45.591624 (Thread-1): SQL status: INSERT 0 0 in 0.01 seconds
+2022-02-07 22:20:45.600158 (Thread-1): On model.project_otus_dbt.sat_rate_gbp_usd_details: COMMIT
+2022-02-07 22:20:45.605929 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_rate_gbp_usd_details".
+2022-02-07 22:20:45.607629 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_msk".
+2022-02-07 22:20:45.608052 (Thread-1): On model.project_otus_dbt.sat_rate_gbp_usd_details: COMMIT
+2022-02-07 22:20:45.608584 (Thread-2): On model.project_otus_dbt.hub_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_msk"} */
+
+    
+
+  create temporary table "hub_wheat_msk__dbt_tmp012045602057"
+  as (
+    -- Generated by dbtvault.
+
+WITH row_rank_1 AS (
+
+SELECT * FROM (
+    SELECT DATE_PK, DATE_KEY, LOAD_DATE, RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY DATE_PK
+               ORDER BY LOAD_DATE ASC
+           ) AS row_number
+    FROM "postgres"."public"."v_stg_wheat_msk"
+
+) as h
+WHERE row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.DATE_PK, a.DATE_KEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+    LEFT JOIN "postgres"."public"."hub_wheat_msk" AS d
+    ON a.DATE_PK = d.DATE_PK
+    WHERE d.DATE_PK IS NULL
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+2022-02-07 22:20:45.609519 (Thread-2): Opening a new connection, currently in state closed
+2022-02-07 22:20:45.614619 (Thread-1): SQL status: COMMIT in 0.01 seconds
+2022-02-07 22:20:45.620319 (Thread-1): finished collecting timing info
+2022-02-07 22:20:45.621153 (Thread-1): On model.project_otus_dbt.sat_rate_gbp_usd_details: Close
+2022-02-07 22:20:45.634114 (Thread-1): 01:20:45 | 10 of 18 OK created incremental model public.sat_rate_gbp_usd_details [INSERT 0 0 in 0.37s]
+2022-02-07 22:20:45.634748 (Thread-1): Finished running node model.project_otus_dbt.sat_rate_gbp_usd_details
+2022-02-07 22:20:45.635413 (Thread-1): Began running node model.project_otus_dbt.sat_wheat_msk_details
+2022-02-07 22:20:45.640160 (Thread-1): 01:20:45 | 12 of 18 START incremental model public.sat_wheat_msk_details........ [RUN]
+2022-02-07 22:20:45.642272 (Thread-1): Acquiring new postgres connection "model.project_otus_dbt.sat_wheat_msk_details".
+2022-02-07 22:20:45.642855 (Thread-1): Compiling model.project_otus_dbt.sat_wheat_msk_details
+2022-02-07 22:20:45.682861 (Thread-2): SQL status: SELECT 0 in 0.07 seconds
+2022-02-07 22:20:45.710277 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_msk".
+2022-02-07 22:20:45.715833 (Thread-2): On model.project_otus_dbt.hub_wheat_msk: BEGIN
+2022-02-07 22:20:45.725385 (Thread-1): Writing injected SQL for node "model.project_otus_dbt.sat_wheat_msk_details"
+2022-02-07 22:20:45.725747 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:45.726301 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_msk".
+2022-02-07 22:20:45.726598 (Thread-2): On model.project_otus_dbt.hub_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_msk"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'hub_wheat_msk__dbt_tmp012045602057'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.727149 (Thread-1): finished collecting timing info
+2022-02-07 22:20:45.743281 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_msk_details".
+2022-02-07 22:20:45.743574 (Thread-2): SQL status: SELECT 4 in 0.02 seconds
+2022-02-07 22:20:45.743816 (Thread-1): On model.project_otus_dbt.sat_wheat_msk_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_msk_details"} */
+
+    
+
+  create temporary table "sat_wheat_msk_details__dbt_tmp012045740985"
+  as (
+    -- Generated by dbtvault.
+
+WITH source_data AS (
+    SELECT a.DATE_PK, a.DATE_HASHDIFF, a.TRADEDATE, a.VALUE, a.OPEN, a.CLOSE, a.HIGH, a.LOW, a.VOLUME, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM "postgres"."public"."v_stg_wheat_msk" AS a
+),
+
+update_records AS (
+    SELECT a.DATE_PK, a.DATE_HASHDIFF, a.TRADEDATE, a.VALUE, a.OPEN, a.CLOSE, a.HIGH, a.LOW, a.VOLUME, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM "postgres"."public"."sat_wheat_msk_details" as a
+    JOIN source_data as b
+    ON a.DATE_PK = b.DATE_PK
+),
+
+latest_records AS (
+
+SELECT * FROM (    
+    SELECT c.DATE_PK, c.DATE_HASHDIFF, c.LOAD_DATE,
+           CASE WHEN RANK()
+           OVER (PARTITION BY c.DATE_PK
+           ORDER BY c.LOAD_DATE DESC) = 1
+    THEN 'Y' ELSE 'N' END AS latest
+    FROM update_records as c
+) as s
+WHERE latest = 'Y'
+
+),
+
+records_to_insert AS (
+    SELECT DISTINCT e.DATE_PK, e.DATE_HASHDIFF, e.TRADEDATE, e.VALUE, e.OPEN, e.CLOSE, e.HIGH, e.LOW, e.VOLUME, e.EFFECTIVE_FROM, e.LOAD_DATE, e.RECORD_SOURCE
+    FROM source_data AS e
+    LEFT JOIN latest_records
+    ON latest_records.DATE_HASHDIFF = e.DATE_HASHDIFF
+    WHERE latest_records.DATE_HASHDIFF IS NULL
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+2022-02-07 22:20:45.754017 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_msk".
+2022-02-07 22:20:45.754401 (Thread-1): Opening a new connection, currently in state closed
+2022-02-07 22:20:45.754834 (Thread-2): On model.project_otus_dbt.hub_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_msk"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'hub_wheat_msk'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.761650 (Thread-2): SQL status: SELECT 4 in 0.01 seconds
+2022-02-07 22:20:45.865298 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_msk".
+2022-02-07 22:20:45.865662 (Thread-2): On model.project_otus_dbt.hub_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_msk"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'hub_wheat_msk'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.872257 (Thread-2): SQL status: SELECT 4 in 0.01 seconds
+2022-02-07 22:20:45.875205 (Thread-2): Writing runtime SQL for node "model.project_otus_dbt.hub_wheat_msk"
+2022-02-07 22:20:45.876686 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_msk".
+2022-02-07 22:20:45.877028 (Thread-2): On model.project_otus_dbt.hub_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_msk"} */
+
+      
+
+    insert into "postgres"."public"."hub_wheat_msk" ("date_pk", "date_key", "load_date", "record_source")
+    (
+       select "date_pk", "date_key", "load_date", "record_source"
+       from "hub_wheat_msk__dbt_tmp012045602057"
+    );
+  
+2022-02-07 22:20:45.878950 (Thread-1): SQL status: SELECT 0 in 0.12 seconds
+2022-02-07 22:20:45.879465 (Thread-2): SQL status: INSERT 0 0 in 0.00 seconds
+2022-02-07 22:20:45.894225 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_msk_details".
+2022-02-07 22:20:45.896810 (Thread-2): On model.project_otus_dbt.hub_wheat_msk: COMMIT
+2022-02-07 22:20:45.897437 (Thread-1): On model.project_otus_dbt.sat_wheat_msk_details: BEGIN
+2022-02-07 22:20:45.897909 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_msk".
+2022-02-07 22:20:45.898976 (Thread-2): On model.project_otus_dbt.hub_wheat_msk: COMMIT
+2022-02-07 22:20:45.900238 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:45.900603 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_msk_details".
+2022-02-07 22:20:45.900826 (Thread-1): On model.project_otus_dbt.sat_wheat_msk_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_msk_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'sat_wheat_msk_details__dbt_tmp012045740985'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.904018 (Thread-2): SQL status: COMMIT in 0.00 seconds
+2022-02-07 22:20:45.910448 (Thread-2): finished collecting timing info
+2022-02-07 22:20:45.910973 (Thread-2): On model.project_otus_dbt.hub_wheat_msk: Close
+2022-02-07 22:20:45.914398 (Thread-2): 01:20:45 | 11 of 18 OK created incremental model public.hub_wheat_msk........... [INSERT 0 0 in 0.40s]
+2022-02-07 22:20:45.914906 (Thread-2): Finished running node model.project_otus_dbt.hub_wheat_msk
+2022-02-07 22:20:45.915428 (Thread-2): Began running node model.project_otus_dbt.hub_wheat_usa
+2022-02-07 22:20:45.921413 (Thread-2): 01:20:45 | 13 of 18 START incremental model public.hub_wheat_usa................ [RUN]
+2022-02-07 22:20:45.922730 (Thread-2): Acquiring new postgres connection "model.project_otus_dbt.hub_wheat_usa".
+2022-02-07 22:20:45.923384 (Thread-2): Compiling model.project_otus_dbt.hub_wheat_usa
+2022-02-07 22:20:45.930781 (Thread-1): SQL status: SELECT 12 in 0.03 seconds
+2022-02-07 22:20:45.949910 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_msk_details".
+2022-02-07 22:20:45.955718 (Thread-1): On model.project_otus_dbt.sat_wheat_msk_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_msk_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'sat_wheat_msk_details'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.958854 (Thread-2): Writing injected SQL for node "model.project_otus_dbt.hub_wheat_usa"
+2022-02-07 22:20:45.960519 (Thread-2): finished collecting timing info
+2022-02-07 22:20:45.971248 (Thread-1): SQL status: SELECT 12 in 0.01 seconds
+2022-02-07 22:20:45.979945 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_usa".
+2022-02-07 22:20:45.990304 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_msk_details".
+2022-02-07 22:20:45.990773 (Thread-2): On model.project_otus_dbt.hub_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_usa"} */
+
+    
+
+  create temporary table "hub_wheat_usa__dbt_tmp012045976983"
+  as (
+    -- Generated by dbtvault.
+
+WITH row_rank_1 AS (
+
+SELECT * FROM (
+    SELECT DATE_PK, DATE_KEY, LOAD_DATE, RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY DATE_PK
+               ORDER BY LOAD_DATE ASC
+           ) AS row_number
+    FROM "postgres"."public"."v_stg_wheat_usa"
+
+) as h
+WHERE row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.DATE_PK, a.DATE_KEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+    LEFT JOIN "postgres"."public"."hub_wheat_usa" AS d
+    ON a.DATE_PK = d.DATE_PK
+    WHERE d.DATE_PK IS NULL
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+2022-02-07 22:20:45.991191 (Thread-1): On model.project_otus_dbt.sat_wheat_msk_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_msk_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'sat_wheat_msk_details'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:45.991600 (Thread-2): Opening a new connection, currently in state closed
+2022-02-07 22:20:45.999266 (Thread-1): SQL status: SELECT 12 in 0.01 seconds
+2022-02-07 22:20:46.001412 (Thread-1): Writing runtime SQL for node "model.project_otus_dbt.sat_wheat_msk_details"
+2022-02-07 22:20:46.002513 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_msk_details".
+2022-02-07 22:20:46.002900 (Thread-1): On model.project_otus_dbt.sat_wheat_msk_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_msk_details"} */
+
+      
+
+    insert into "postgres"."public"."sat_wheat_msk_details" ("date_pk", "date_hashdiff", "tradedate", "value", "open", "close", "high", "low", "volume", "effective_from", "load_date", "record_source")
+    (
+       select "date_pk", "date_hashdiff", "tradedate", "value", "open", "close", "high", "low", "volume", "effective_from", "load_date", "record_source"
+       from "sat_wheat_msk_details__dbt_tmp012045740985"
+    );
+  
+2022-02-07 22:20:46.005079 (Thread-1): SQL status: INSERT 0 0 in 0.00 seconds
+2022-02-07 22:20:46.007614 (Thread-1): On model.project_otus_dbt.sat_wheat_msk_details: COMMIT
+2022-02-07 22:20:46.007890 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_msk_details".
+2022-02-07 22:20:46.007987 (Thread-1): On model.project_otus_dbt.sat_wheat_msk_details: COMMIT
+2022-02-07 22:20:46.011232 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2022-02-07 22:20:46.015058 (Thread-1): finished collecting timing info
+2022-02-07 22:20:46.015616 (Thread-1): On model.project_otus_dbt.sat_wheat_msk_details: Close
+2022-02-07 22:20:46.018611 (Thread-1): 01:20:46 | 12 of 18 OK created incremental model public.sat_wheat_msk_details... [INSERT 0 0 in 0.37s]
+2022-02-07 22:20:46.019259 (Thread-1): Finished running node model.project_otus_dbt.sat_wheat_msk_details
+2022-02-07 22:20:46.019829 (Thread-1): Began running node model.project_otus_dbt.sat_wheat_usa_details
+2022-02-07 22:20:46.023258 (Thread-1): 01:20:46 | 14 of 18 START incremental model public.sat_wheat_usa_details........ [RUN]
+2022-02-07 22:20:46.024864 (Thread-1): Acquiring new postgres connection "model.project_otus_dbt.sat_wheat_usa_details".
+2022-02-07 22:20:46.025319 (Thread-1): Compiling model.project_otus_dbt.sat_wheat_usa_details
+2022-02-07 22:20:46.031605 (Thread-2): SQL status: SELECT 0 in 0.04 seconds
+2022-02-07 22:20:46.050620 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_usa".
+2022-02-07 22:20:46.056219 (Thread-2): On model.project_otus_dbt.hub_wheat_usa: BEGIN
+2022-02-07 22:20:46.068774 (Thread-2): SQL status: BEGIN in 0.01 seconds
+2022-02-07 22:20:46.074430 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_usa".
+2022-02-07 22:20:46.076225 (Thread-1): Writing injected SQL for node "model.project_otus_dbt.sat_wheat_usa_details"
+2022-02-07 22:20:46.076516 (Thread-2): On model.project_otus_dbt.hub_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_usa"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'hub_wheat_usa__dbt_tmp012045976983'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:46.077738 (Thread-1): finished collecting timing info
+2022-02-07 22:20:46.094616 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_usa_details".
+2022-02-07 22:20:46.095162 (Thread-2): SQL status: SELECT 4 in 0.02 seconds
+2022-02-07 22:20:46.095476 (Thread-1): On model.project_otus_dbt.sat_wheat_usa_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_usa_details"} */
+
+    
+
+  create temporary table "sat_wheat_usa_details__dbt_tmp012046091925"
+  as (
+    -- Generated by dbtvault.
+
+WITH source_data AS (
+    SELECT a.DATE_PK, a.DATE_HASHDIFF, a.TRADEDATE, a.PRICE, a.OPEN, a.HIGH, a.LOW, a.VOLUME, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM "postgres"."public"."v_stg_wheat_usa" AS a
+),
+
+update_records AS (
+    SELECT a.DATE_PK, a.DATE_HASHDIFF, a.TRADEDATE, a.PRICE, a.OPEN, a.HIGH, a.LOW, a.VOLUME, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM "postgres"."public"."sat_wheat_usa_details" as a
+    JOIN source_data as b
+    ON a.DATE_PK = b.DATE_PK
+),
+
+latest_records AS (
+
+SELECT * FROM (    
+    SELECT c.DATE_PK, c.DATE_HASHDIFF, c.LOAD_DATE,
+           CASE WHEN RANK()
+           OVER (PARTITION BY c.DATE_PK
+           ORDER BY c.LOAD_DATE DESC) = 1
+    THEN 'Y' ELSE 'N' END AS latest
+    FROM update_records as c
+) as s
+WHERE latest = 'Y'
+
+),
+
+records_to_insert AS (
+    SELECT DISTINCT e.DATE_PK, e.DATE_HASHDIFF, e.TRADEDATE, e.PRICE, e.OPEN, e.HIGH, e.LOW, e.VOLUME, e.EFFECTIVE_FROM, e.LOAD_DATE, e.RECORD_SOURCE
+    FROM source_data AS e
+    LEFT JOIN latest_records
+    ON latest_records.DATE_HASHDIFF = e.DATE_HASHDIFF
+    WHERE latest_records.DATE_HASHDIFF IS NULL
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+2022-02-07 22:20:46.103481 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_usa".
+2022-02-07 22:20:46.103868 (Thread-1): Opening a new connection, currently in state closed
+2022-02-07 22:20:46.104263 (Thread-2): On model.project_otus_dbt.hub_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_usa"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'hub_wheat_usa'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:46.111484 (Thread-2): SQL status: SELECT 4 in 0.01 seconds
+2022-02-07 22:20:46.123951 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_usa".
+2022-02-07 22:20:46.124216 (Thread-2): On model.project_otus_dbt.hub_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_usa"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'hub_wheat_usa'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:46.130535 (Thread-2): SQL status: SELECT 4 in 0.01 seconds
+2022-02-07 22:20:46.132968 (Thread-2): Writing runtime SQL for node "model.project_otus_dbt.hub_wheat_usa"
+2022-02-07 22:20:46.134135 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_usa".
+2022-02-07 22:20:46.134516 (Thread-2): On model.project_otus_dbt.hub_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.hub_wheat_usa"} */
+
+      
+
+    insert into "postgres"."public"."hub_wheat_usa" ("date_pk", "date_key", "load_date", "record_source")
+    (
+       select "date_pk", "date_key", "load_date", "record_source"
+       from "hub_wheat_usa__dbt_tmp012045976983"
+    );
+  
+2022-02-07 22:20:46.137082 (Thread-2): SQL status: INSERT 0 0 in 0.00 seconds
+2022-02-07 22:20:46.142053 (Thread-2): On model.project_otus_dbt.hub_wheat_usa: COMMIT
+2022-02-07 22:20:46.142636 (Thread-2): Using postgres connection "model.project_otus_dbt.hub_wheat_usa".
+2022-02-07 22:20:46.143290 (Thread-2): On model.project_otus_dbt.hub_wheat_usa: COMMIT
+2022-02-07 22:20:46.146685 (Thread-2): SQL status: COMMIT in 0.00 seconds
+2022-02-07 22:20:46.151002 (Thread-2): finished collecting timing info
+2022-02-07 22:20:46.151952 (Thread-1): SQL status: SELECT 0 in 0.05 seconds
+2022-02-07 22:20:46.152502 (Thread-2): On model.project_otus_dbt.hub_wheat_usa: Close
+2022-02-07 22:20:46.161715 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_usa_details".
+2022-02-07 22:20:46.162454 (Thread-1): On model.project_otus_dbt.sat_wheat_usa_details: BEGIN
+2022-02-07 22:20:46.166448 (Thread-2): 01:20:46 | 13 of 18 OK created incremental model public.hub_wheat_usa........... [INSERT 0 0 in 0.24s]
+2022-02-07 22:20:46.167448 (Thread-2): Finished running node model.project_otus_dbt.hub_wheat_usa
+2022-02-07 22:20:46.168087 (Thread-2): Began running node model.project_otus_dbt.dds_rate_gbp_usd
+2022-02-07 22:20:46.174144 (Thread-2): 01:20:46 | 15 of 18 START table model public.dds_rate_gbp_usd................... [RUN]
+2022-02-07 22:20:46.174560 (Thread-1): SQL status: BEGIN in 0.01 seconds
+2022-02-07 22:20:46.175513 (Thread-2): Acquiring new postgres connection "model.project_otus_dbt.dds_rate_gbp_usd".
+2022-02-07 22:20:46.176171 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_usa_details".
+2022-02-07 22:20:46.176999 (Thread-2): Compiling model.project_otus_dbt.dds_rate_gbp_usd
+2022-02-07 22:20:46.177664 (Thread-1): On model.project_otus_dbt.sat_wheat_usa_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_usa_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'sat_wheat_usa_details__dbt_tmp012046091925'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:46.204804 (Thread-2): Writing injected SQL for node "model.project_otus_dbt.dds_rate_gbp_usd"
+2022-02-07 22:20:46.205221 (Thread-1): SQL status: SELECT 11 in 0.02 seconds
+2022-02-07 22:20:46.217349 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_usa_details".
+2022-02-07 22:20:46.218844 (Thread-2): finished collecting timing info
+2022-02-07 22:20:46.220005 (Thread-1): On model.project_otus_dbt.sat_wheat_usa_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_usa_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'sat_wheat_usa_details'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:46.242440 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_rate_gbp_usd".
+2022-02-07 22:20:46.242858 (Thread-2): On model.project_otus_dbt.dds_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_rate_gbp_usd"} */
+drop table if exists "postgres"."public"."dds_rate_gbp_usd__dbt_tmp" cascade
+2022-02-07 22:20:46.243174 (Thread-1): SQL status: SELECT 11 in 0.01 seconds
+2022-02-07 22:20:46.243511 (Thread-2): Opening a new connection, currently in state closed
+2022-02-07 22:20:46.253219 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_usa_details".
+2022-02-07 22:20:46.254314 (Thread-1): On model.project_otus_dbt.sat_wheat_usa_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_usa_details"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "postgres".INFORMATION_SCHEMA.columns
+      where table_name = 'sat_wheat_usa_details'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+2022-02-07 22:20:46.261441 (Thread-1): SQL status: SELECT 11 in 0.01 seconds
+2022-02-07 22:20:46.264094 (Thread-1): Writing runtime SQL for node "model.project_otus_dbt.sat_wheat_usa_details"
+2022-02-07 22:20:46.265124 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_usa_details".
+2022-02-07 22:20:46.265563 (Thread-1): On model.project_otus_dbt.sat_wheat_usa_details: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.sat_wheat_usa_details"} */
+
+      
+
+    insert into "postgres"."public"."sat_wheat_usa_details" ("date_pk", "date_hashdiff", "tradedate", "price", "open", "high", "low", "volume", "effective_from", "load_date", "record_source")
+    (
+       select "date_pk", "date_hashdiff", "tradedate", "price", "open", "high", "low", "volume", "effective_from", "load_date", "record_source"
+       from "sat_wheat_usa_details__dbt_tmp012046091925"
+    );
+  
+2022-02-07 22:20:46.268319 (Thread-1): SQL status: INSERT 0 0 in 0.00 seconds
+2022-02-07 22:20:46.272252 (Thread-1): On model.project_otus_dbt.sat_wheat_usa_details: COMMIT
+2022-02-07 22:20:46.273128 (Thread-2): SQL status: DROP TABLE in 0.03 seconds
+2022-02-07 22:20:46.273676 (Thread-1): Using postgres connection "model.project_otus_dbt.sat_wheat_usa_details".
+2022-02-07 22:20:46.282115 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_rate_gbp_usd".
+2022-02-07 22:20:46.282633 (Thread-1): On model.project_otus_dbt.sat_wheat_usa_details: COMMIT
+2022-02-07 22:20:46.283063 (Thread-2): On model.project_otus_dbt.dds_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_rate_gbp_usd"} */
+drop table if exists "postgres"."public"."dds_rate_gbp_usd__dbt_backup" cascade
+2022-02-07 22:20:46.285046 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2022-02-07 22:20:46.291162 (Thread-2): Writing runtime SQL for node "model.project_otus_dbt.dds_rate_gbp_usd"
+2022-02-07 22:20:46.291894 (Thread-1): SQL status: COMMIT in 0.01 seconds
+2022-02-07 22:20:46.295194 (Thread-1): finished collecting timing info
+2022-02-07 22:20:46.295794 (Thread-1): On model.project_otus_dbt.sat_wheat_usa_details: Close
+2022-02-07 22:20:46.299090 (Thread-1): 01:20:46 | 14 of 18 OK created incremental model public.sat_wheat_usa_details... [INSERT 0 0 in 0.27s]
+2022-02-07 22:20:46.299633 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_rate_gbp_usd".
+2022-02-07 22:20:46.300257 (Thread-1): Finished running node model.project_otus_dbt.sat_wheat_usa_details
+2022-02-07 22:20:46.300629 (Thread-2): On model.project_otus_dbt.dds_rate_gbp_usd: BEGIN
+2022-02-07 22:20:46.301479 (Thread-1): Began running node model.project_otus_dbt.dds_wheat_msk
+2022-02-07 22:20:46.305467 (Thread-1): 01:20:46 | 16 of 18 START table model public.dds_wheat_msk...................... [RUN]
+2022-02-07 22:20:46.305873 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:46.306987 (Thread-1): Acquiring new postgres connection "model.project_otus_dbt.dds_wheat_msk".
+2022-02-07 22:20:46.307528 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_rate_gbp_usd".
+2022-02-07 22:20:46.307902 (Thread-1): Compiling model.project_otus_dbt.dds_wheat_msk
+2022-02-07 22:20:46.308153 (Thread-2): On model.project_otus_dbt.dds_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_rate_gbp_usd"} */
+
+
+  create  table "postgres"."public"."dds_rate_gbp_usd__dbt_tmp"
+  as (
+    with rate as(
+    select to_date(su.tradedate, 'DD.MM.YYYY') as tradedate
+        ,hu.date_pk
+        ,cast(su.price as decimal(18,2))/10000.0 as rate
+        ,cast(su.open as decimal(18,2))/10000.0 as open
+        ,cast(su.high as decimal(18,2))/10000.0 as high
+        ,cast(su.low as decimal(18,2))/10000.0 as low
+    from "postgres"."public"."hub_rate_gbp_usd" as hu
+    left join "postgres"."public"."sat_rate_gbp_usd_details" as su
+    on hu.date_pk=su.date_pk
+)
+select * from rate
+  );
+2022-02-07 22:20:46.329566 (Thread-1): Writing injected SQL for node "model.project_otus_dbt.dds_wheat_msk"
+2022-02-07 22:20:46.330308 (Thread-1): finished collecting timing info
+2022-02-07 22:20:46.347732 (Thread-1): Using postgres connection "model.project_otus_dbt.dds_wheat_msk".
+2022-02-07 22:20:46.348023 (Thread-2): SQL status: SELECT 548 in 0.03 seconds
+2022-02-07 22:20:46.348266 (Thread-1): On model.project_otus_dbt.dds_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_msk"} */
+drop table if exists "postgres"."public"."dds_wheat_msk__dbt_tmp" cascade
+2022-02-07 22:20:46.357973 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_rate_gbp_usd".
+2022-02-07 22:20:46.358301 (Thread-1): Opening a new connection, currently in state closed
+2022-02-07 22:20:46.358643 (Thread-2): On model.project_otus_dbt.dds_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_rate_gbp_usd"} */
+alter table "postgres"."public"."dds_rate_gbp_usd" rename to "dds_rate_gbp_usd__dbt_backup"
+2022-02-07 22:20:46.361038 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:46.367570 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_rate_gbp_usd".
+2022-02-07 22:20:46.368015 (Thread-2): On model.project_otus_dbt.dds_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_rate_gbp_usd"} */
+alter table "postgres"."public"."dds_rate_gbp_usd__dbt_tmp" rename to "dds_rate_gbp_usd"
+2022-02-07 22:20:46.370937 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:46.373674 (Thread-2): On model.project_otus_dbt.dds_rate_gbp_usd: COMMIT
+2022-02-07 22:20:46.374059 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_rate_gbp_usd".
+2022-02-07 22:20:46.374415 (Thread-2): On model.project_otus_dbt.dds_rate_gbp_usd: COMMIT
+2022-02-07 22:20:46.376675 (Thread-1): SQL status: DROP TABLE in 0.02 seconds
+2022-02-07 22:20:46.381823 (Thread-1): Using postgres connection "model.project_otus_dbt.dds_wheat_msk".
+2022-02-07 22:20:46.382119 (Thread-2): SQL status: COMMIT in 0.01 seconds
+2022-02-07 22:20:46.382349 (Thread-1): On model.project_otus_dbt.dds_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_msk"} */
+drop table if exists "postgres"."public"."dds_wheat_msk__dbt_backup" cascade
+2022-02-07 22:20:46.386994 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_rate_gbp_usd".
+2022-02-07 22:20:46.387701 (Thread-2): On model.project_otus_dbt.dds_rate_gbp_usd: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_rate_gbp_usd"} */
+drop table if exists "postgres"."public"."dds_rate_gbp_usd__dbt_backup" cascade
+2022-02-07 22:20:46.389092 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2022-02-07 22:20:46.391402 (Thread-1): Writing runtime SQL for node "model.project_otus_dbt.dds_wheat_msk"
+2022-02-07 22:20:46.393620 (Thread-1): Using postgres connection "model.project_otus_dbt.dds_wheat_msk".
+2022-02-07 22:20:46.394056 (Thread-1): On model.project_otus_dbt.dds_wheat_msk: BEGIN
+2022-02-07 22:20:46.396164 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:46.396668 (Thread-2): SQL status: DROP TABLE in 0.01 seconds
+2022-02-07 22:20:46.397124 (Thread-1): Using postgres connection "model.project_otus_dbt.dds_wheat_msk".
+2022-02-07 22:20:46.404820 (Thread-2): finished collecting timing info
+2022-02-07 22:20:46.405487 (Thread-1): On model.project_otus_dbt.dds_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_msk"} */
+
+
+  create  table "postgres"."public"."dds_wheat_msk__dbt_tmp"
+  as (
+    with dds_wheat_msk as(
+    select su.tradedate  as tradedate
+        ,case when su.value=0 and su.volume>0 then cast(su.volume*su.close as decimal(18,2))
+            else cast(su.value as decimal(18,2))
+            end as value_all
+        ,cast(su.open as decimal(18,2)) as open
+        ,cast(su.close as decimal(18,2)) as close
+        ,cast(su.high as decimal(18,2)) as high
+        ,cast(su.low as decimal(18,2)) as low
+        ,cast(su.volume as decimal(18,2)) as volume
+    from "postgres"."public"."hub_wheat_msk" as hu
+    left join "postgres"."public"."sat_wheat_msk_details" as su
+    on hu.date_pk=su.date_pk
+)
+select * from dds_wheat_msk
+  );
+2022-02-07 22:20:46.406026 (Thread-2): On model.project_otus_dbt.dds_rate_gbp_usd: Close
+2022-02-07 22:20:46.410609 (Thread-2): 01:20:46 | 15 of 18 OK created table model public.dds_rate_gbp_usd.............. [SELECT 548 in 0.23s]
+2022-02-07 22:20:46.411217 (Thread-2): Finished running node model.project_otus_dbt.dds_rate_gbp_usd
+2022-02-07 22:20:46.411845 (Thread-2): Began running node model.project_otus_dbt.dds_wheat_usa
+2022-02-07 22:20:46.415205 (Thread-2): 01:20:46 | 17 of 18 START table model public.dds_wheat_usa...................... [RUN]
+2022-02-07 22:20:46.416673 (Thread-2): Acquiring new postgres connection "model.project_otus_dbt.dds_wheat_usa".
+2022-02-07 22:20:46.417204 (Thread-2): Compiling model.project_otus_dbt.dds_wheat_usa
+2022-02-07 22:20:46.428123 (Thread-1): SQL status: SELECT 216 in 0.02 seconds
+2022-02-07 22:20:46.442970 (Thread-2): Writing injected SQL for node "model.project_otus_dbt.dds_wheat_usa"
+2022-02-07 22:20:46.447262 (Thread-1): Using postgres connection "model.project_otus_dbt.dds_wheat_msk".
+2022-02-07 22:20:46.447999 (Thread-1): On model.project_otus_dbt.dds_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_msk"} */
+alter table "postgres"."public"."dds_wheat_msk" rename to "dds_wheat_msk__dbt_backup"
+2022-02-07 22:20:46.448631 (Thread-2): finished collecting timing info
+2022-02-07 22:20:46.463842 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_usa".
+2022-02-07 22:20:46.464136 (Thread-2): On model.project_otus_dbt.dds_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_usa"} */
+drop table if exists "postgres"."public"."dds_wheat_usa__dbt_tmp" cascade
+2022-02-07 22:20:46.464295 (Thread-2): Opening a new connection, currently in state closed
+2022-02-07 22:20:46.480754 (Thread-2): SQL status: DROP TABLE in 0.02 seconds
+2022-02-07 22:20:46.487239 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_usa".
+2022-02-07 22:20:46.487635 (Thread-2): On model.project_otus_dbt.dds_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_usa"} */
+drop table if exists "postgres"."public"."dds_wheat_usa__dbt_backup" cascade
+2022-02-07 22:20:46.489644 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2022-02-07 22:20:46.491593 (Thread-2): Writing runtime SQL for node "model.project_otus_dbt.dds_wheat_usa"
+2022-02-07 22:20:46.492686 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_usa".
+2022-02-07 22:20:46.493195 (Thread-2): On model.project_otus_dbt.dds_wheat_usa: BEGIN
+2022-02-07 22:20:46.494964 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:46.495278 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_usa".
+2022-02-07 22:20:46.495470 (Thread-2): On model.project_otus_dbt.dds_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_usa"} */
+
+
+  create  table "postgres"."public"."dds_wheat_usa__dbt_tmp"
+  as (
+    with usa as (
+    select cast(to_date(su.tradedate, 'DD.MM.YYYY') as date) as tradedate
+        ,cast(su.price as decimal(18,2))/100.0/2.7 as price
+        ,cast(su.open as decimal(18,2))/100.0 as open
+        ,cast(su.high as decimal(18,2))/100.0 as high
+        ,cast(su.low as decimal(18,2))/100.0 as low
+        ,cast(su.volume as varchar(50)) as volume
+    from "postgres"."public"."hub_wheat_usa" as hu
+    left join "postgres"."public"."sat_wheat_usa_details" as su
+    on hu.date_pk=su.date_pk
+)
+select * from usa
+  );
+2022-02-07 22:20:46.515996 (Thread-2): SQL status: SELECT 547 in 0.02 seconds
+2022-02-07 22:20:46.526204 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_usa".
+2022-02-07 22:20:46.526616 (Thread-2): On model.project_otus_dbt.dds_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_usa"} */
+alter table "postgres"."public"."dds_wheat_usa" rename to "dds_wheat_usa__dbt_backup"
+2022-02-07 22:20:46.528893 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:46.534087 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_usa".
+2022-02-07 22:20:46.534592 (Thread-2): On model.project_otus_dbt.dds_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_usa"} */
+alter table "postgres"."public"."dds_wheat_usa__dbt_tmp" rename to "dds_wheat_usa"
+2022-02-07 22:20:46.537066 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:46.539951 (Thread-2): On model.project_otus_dbt.dds_wheat_usa: COMMIT
+2022-02-07 22:20:46.540381 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_usa".
+2022-02-07 22:20:46.540779 (Thread-2): On model.project_otus_dbt.dds_wheat_usa: COMMIT
+2022-02-07 22:20:46.544516 (Thread-2): SQL status: COMMIT in 0.00 seconds
+2022-02-07 22:20:46.550116 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_usa".
+2022-02-07 22:20:46.550551 (Thread-2): On model.project_otus_dbt.dds_wheat_usa: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_usa"} */
+drop table if exists "postgres"."public"."dds_wheat_usa__dbt_backup" cascade
+2022-02-07 22:20:46.560380 (Thread-2): SQL status: DROP TABLE in 0.01 seconds
+2022-02-07 22:20:46.565655 (Thread-2): finished collecting timing info
+2022-02-07 22:20:46.566269 (Thread-2): On model.project_otus_dbt.dds_wheat_usa: Close
+2022-02-07 22:20:46.572778 (Thread-2): 01:20:46 | 17 of 18 OK created table model public.dds_wheat_usa................. [SELECT 547 in 0.15s]
+2022-02-07 22:20:46.573521 (Thread-2): Finished running node model.project_otus_dbt.dds_wheat_usa
+2022-02-07 22:20:46.574709 (Thread-2): Began running node model.project_otus_dbt.dds_wheat_gbp
+2022-02-07 22:20:46.579934 (Thread-2): 01:20:46 | 18 of 18 START table model public.dds_wheat_gbp...................... [RUN]
+2022-02-07 22:20:46.580974 (Thread-2): Acquiring new postgres connection "model.project_otus_dbt.dds_wheat_gbp".
+2022-02-07 22:20:46.581535 (Thread-2): Compiling model.project_otus_dbt.dds_wheat_gbp
+2022-02-07 22:20:46.615439 (Thread-2): Writing injected SQL for node "model.project_otus_dbt.dds_wheat_gbp"
+2022-02-07 22:20:46.618018 (Thread-2): finished collecting timing info
+2022-02-07 22:20:46.639866 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_gbp".
+2022-02-07 22:20:46.640260 (Thread-2): On model.project_otus_dbt.dds_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_gbp"} */
+drop table if exists "postgres"."public"."dds_wheat_gbp__dbt_tmp" cascade
+2022-02-07 22:20:46.640611 (Thread-2): Opening a new connection, currently in state closed
+2022-02-07 22:20:46.658627 (Thread-2): SQL status: DROP TABLE in 0.02 seconds
+2022-02-07 22:20:46.668916 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_gbp".
+2022-02-07 22:20:46.669287 (Thread-2): On model.project_otus_dbt.dds_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_gbp"} */
+drop table if exists "postgres"."public"."dds_wheat_gbp__dbt_backup" cascade
+2022-02-07 22:20:46.671020 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2022-02-07 22:20:46.674193 (Thread-2): Writing runtime SQL for node "model.project_otus_dbt.dds_wheat_gbp"
+2022-02-07 22:20:46.675442 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_gbp".
+2022-02-07 22:20:46.675889 (Thread-2): On model.project_otus_dbt.dds_wheat_gbp: BEGIN
+2022-02-07 22:20:46.677795 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2022-02-07 22:20:46.678629 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_gbp".
+2022-02-07 22:20:46.679279 (Thread-2): On model.project_otus_dbt.dds_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_gbp"} */
+
+
+  create  table "postgres"."public"."dds_wheat_gbp__dbt_tmp"
+  as (
+    with gbp as(
+    select to_date(su.tradedate, 'DD.MM.YYYY') as tradedate
+        ,cast(su.price as decimal(18,2))/100.0*rt.rate as price
+        ,cast(su.open as decimal(18,2))/100.0 as open
+        ,cast(su.high as decimal(18,2))/100.0 as high
+        ,cast(su.low as decimal(18,2))/100.0 as low
+        ,cast(su.volume as varchar(50)) as volume
+    from "postgres"."public"."hub_wheat_gbp" as hu
+    left join "postgres"."public"."sat_wheat_gbp_details" as su
+    on hu.date_pk=su.date_pk
+    left join "postgres"."public"."dds_rate_gbp_usd" as rt
+    on hu.date_pk=rt.date_pk
+)
+select * from gbp
+  );
+2022-02-07 22:20:46.706215 (Thread-2): SQL status: SELECT 531 in 0.03 seconds
+2022-02-07 22:20:46.714262 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_gbp".
+2022-02-07 22:20:46.714688 (Thread-2): On model.project_otus_dbt.dds_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_gbp"} */
+alter table "postgres"."public"."dds_wheat_gbp" rename to "dds_wheat_gbp__dbt_backup"
+2022-02-07 22:20:46.718130 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:46.725054 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_gbp".
+2022-02-07 22:20:46.725372 (Thread-2): On model.project_otus_dbt.dds_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_gbp"} */
+alter table "postgres"."public"."dds_wheat_gbp__dbt_tmp" rename to "dds_wheat_gbp"
+2022-02-07 22:20:46.727514 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:46.730192 (Thread-2): On model.project_otus_dbt.dds_wheat_gbp: COMMIT
+2022-02-07 22:20:46.730474 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_gbp".
+2022-02-07 22:20:46.730622 (Thread-2): On model.project_otus_dbt.dds_wheat_gbp: COMMIT
+2022-02-07 22:20:46.734192 (Thread-2): SQL status: COMMIT in 0.00 seconds
+2022-02-07 22:20:46.739206 (Thread-2): Using postgres connection "model.project_otus_dbt.dds_wheat_gbp".
+2022-02-07 22:20:46.739611 (Thread-2): On model.project_otus_dbt.dds_wheat_gbp: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_gbp"} */
+drop table if exists "postgres"."public"."dds_wheat_gbp__dbt_backup" cascade
+2022-02-07 22:20:46.746551 (Thread-2): SQL status: DROP TABLE in 0.01 seconds
+2022-02-07 22:20:46.752824 (Thread-2): finished collecting timing info
+2022-02-07 22:20:46.753727 (Thread-2): On model.project_otus_dbt.dds_wheat_gbp: Close
+2022-02-07 22:20:46.757954 (Thread-2): 01:20:46 | 18 of 18 OK created table model public.dds_wheat_gbp................. [SELECT 531 in 0.17s]
+2022-02-07 22:20:46.758467 (Thread-2): Finished running node model.project_otus_dbt.dds_wheat_gbp
+2022-02-07 22:20:47.189352 (Thread-1): SQL status: ALTER TABLE in 0.74 seconds
+2022-02-07 22:20:47.196455 (Thread-1): Using postgres connection "model.project_otus_dbt.dds_wheat_msk".
+2022-02-07 22:20:47.196908 (Thread-1): On model.project_otus_dbt.dds_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_msk"} */
+alter table "postgres"."public"."dds_wheat_msk__dbt_tmp" rename to "dds_wheat_msk"
+2022-02-07 22:20:47.199586 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2022-02-07 22:20:47.202499 (Thread-1): On model.project_otus_dbt.dds_wheat_msk: COMMIT
+2022-02-07 22:20:47.202866 (Thread-1): Using postgres connection "model.project_otus_dbt.dds_wheat_msk".
+2022-02-07 22:20:47.203060 (Thread-1): On model.project_otus_dbt.dds_wheat_msk: COMMIT
+2022-02-07 22:20:47.207944 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2022-02-07 22:20:47.221109 (Thread-1): Using postgres connection "model.project_otus_dbt.dds_wheat_msk".
+2022-02-07 22:20:47.222592 (Thread-1): On model.project_otus_dbt.dds_wheat_msk: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.project_otus_dbt.dds_wheat_msk"} */
+drop table if exists "postgres"."public"."dds_wheat_msk__dbt_backup" cascade
+2022-02-07 22:20:47.228256 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2022-02-07 22:20:47.234296 (Thread-1): finished collecting timing info
+2022-02-07 22:20:47.235046 (Thread-1): On model.project_otus_dbt.dds_wheat_msk: Close
+2022-02-07 22:20:47.238736 (Thread-1): 01:20:47 | 16 of 18 OK created table model public.dds_wheat_msk................. [SELECT 216 in 0.93s]
+2022-02-07 22:20:47.239817 (Thread-1): Finished running node model.project_otus_dbt.dds_wheat_msk
+2022-02-07 22:20:47.243417 (MainThread): Acquiring new postgres connection "master".
+2022-02-07 22:20:47.243955 (MainThread): Using postgres connection "master".
+2022-02-07 22:20:47.244371 (MainThread): On master: BEGIN
+2022-02-07 22:20:47.244766 (MainThread): Opening a new connection, currently in state closed
+2022-02-07 22:20:47.259777 (MainThread): SQL status: BEGIN in 0.01 seconds
+2022-02-07 22:20:47.260236 (MainThread): On master: COMMIT
+2022-02-07 22:20:47.260484 (MainThread): Using postgres connection "master".
+2022-02-07 22:20:47.260723 (MainThread): On master: COMMIT
+2022-02-07 22:20:47.262152 (MainThread): SQL status: COMMIT in 0.00 seconds
+2022-02-07 22:20:47.262530 (MainThread): On master: Close
+2022-02-07 22:20:47.263560 (MainThread): 01:20:47 | 
+2022-02-07 22:20:47.264014 (MainThread): 01:20:47 | Finished running 4 view models, 6 table models, 8 incremental models in 6.84s.
+2022-02-07 22:20:47.264360 (MainThread): Connection 'master' was properly closed.
+2022-02-07 22:20:47.264571 (MainThread): Connection 'model.project_otus_dbt.dds_wheat_msk' was properly closed.
+2022-02-07 22:20:47.264865 (MainThread): Connection 'model.project_otus_dbt.dds_wheat_gbp' was properly closed.
+2022-02-07 22:20:47.632986 (MainThread): 
+2022-02-07 22:20:47.633549 (MainThread): Completed successfully
+2022-02-07 22:20:47.634037 (MainThread): 
+Done. PASS=18 WARN=0 ERROR=0 SKIP=0 TOTAL=18
+2022-02-07 22:20:47.634646 (MainThread): Flushing usage events
