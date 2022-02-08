@@ -52,9 +52,5 @@ models:
       tags:
         - 'dim'
       materialized: table
-    report:
-      tags:
-        - 'report'
-      materialized: table
         
           

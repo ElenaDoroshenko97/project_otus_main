@@ -1,5 +1,6 @@
 with usa as (
     select cast(to_date(su.tradedate, 'DD.MM.YYYY') as date) as tradedate
+        ,hu.date_pk
         ,cast(su.price as decimal(18,2))/100.0/2.7 as price
         ,cast(su.open as decimal(18,2))/100.0 as open
         ,cast(su.high as decimal(18,2))/100.0 as high

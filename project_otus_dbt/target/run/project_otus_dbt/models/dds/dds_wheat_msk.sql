@@ -3,7 +3,8 @@
   create  table "postgres"."public"."dds_wheat_msk__dbt_tmp"
   as (
     with dds_wheat_msk as(
-    select su.tradedate  as tradedate
+    select cast(su.tradedate as date) as tradedate
+        ,hu.date_pk
         ,case when su.value=0 and su.volume>0 then cast(su.volume*su.close as decimal(18,2))
             else cast(su.value as decimal(18,2))
             end as value_all

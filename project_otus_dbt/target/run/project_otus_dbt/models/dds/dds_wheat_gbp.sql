@@ -3,7 +3,8 @@
   create  table "postgres"."public"."dds_wheat_gbp__dbt_tmp"
   as (
     with gbp as(
-    select to_date(su.tradedate, 'DD.MM.YYYY') as tradedate
+    select cast(to_date(su.tradedate, 'DD.MM.YYYY') as date) as tradedate
+        ,hu.date_pk
         ,cast(su.price as decimal(18,2))/100.0*rt.rate as price
         ,cast(su.open as decimal(18,2))/100.0 as open
         ,cast(su.high as decimal(18,2))/100.0 as high
