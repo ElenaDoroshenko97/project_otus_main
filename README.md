@@ -15,7 +15,7 @@
 ### Источники:
 
 #### Московская биржа: https://www.moex.com/
-#### Мровые товарные биржи: https://ru.investing.com/
+#### Мировые товарные биржи: https://ru.investing.com/
 
 ***
 
